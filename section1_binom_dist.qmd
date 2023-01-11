@@ -1,3 +1,7 @@
 # Binomial distribution
 
-In summary, this book has no content whatsoever.
+Topics: 
+
+- Discrete probability distribution
+- Binomial trials and coefficients
+- Binomial distribution

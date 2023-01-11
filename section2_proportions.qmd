@@ -1,3 +1,9 @@
 # Proportions
 
-In summary, this book has no content whatsoever.
+Topics:
+
+- Proportions
+- Tests 
+- Comparingg two proportions
+- Odds ratio
+- Relative risk 

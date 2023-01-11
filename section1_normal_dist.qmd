@@ -1,3 +1,7 @@
 # Normal distribution
 
-In summary, this book has no content whatsoever.
+Topics:
+
+- Continuous probability distribution
+- Normal distribution
+- Normal approximation to binomial distribution

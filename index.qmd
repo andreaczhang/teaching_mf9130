@@ -1,9 +1,7 @@
 # About {.unnumbered}
 
-This is the lecture notes for the course:  **Introductory Statistics MF9130/MF9130E** at the Faculty of Medicine, University of Oslo. 
+This is the lecture notes for the course: **Introductory Statistics MF9130/MF9130E** at the Faculty of Medicine, University of Oslo.
 
-This website is currently under development. 
+This website is currently under development.
 
-Official course website and material please check [here](https://www.uio.no/studier/emner/medisin/med/MF9130/). 
-
-
+Official course website and material please check [here](https://www.uio.no/studier/emner/medisin/med/MF9130/).
