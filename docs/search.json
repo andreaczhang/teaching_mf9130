@@ -2,23 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "book_test",
+    "title": "Lecture Notes for MF9130/9130E",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "About\nThis is the lecture notes for the course: Introductory Statistics MF9130/MF9130E at the Faculty of Medicine, University of Oslo.\nThis website is currently under development.\nOfficial course website and material please check here."
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This is a book created from markdown and executable code.\nThis is how you cite Knuth (1984)\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "11  Summary",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "text": "In summary, this book has no content whatsoever."
   },
   {
     "objectID": "references.html",
@@ -26,5 +26,89 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "section1.html",
+    "href": "section1.html",
+    "title": "Section 1",
+    "section": "",
+    "text": "This section will lay the foundation."
+  },
+  {
+    "objectID": "section1_descrpt_stat.html",
+    "href": "section1_descrpt_stat.html",
+    "title": "2  Data and descriptive statistics",
+    "section": "",
+    "text": "In this chapter, you’ll find …"
+  },
+  {
+    "objectID": "section1_probability.html",
+    "href": "section1_probability.html",
+    "title": "3  Probability",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section1_binom_dist.html",
+    "href": "section1_binom_dist.html",
+    "title": "4  Binomial distribution",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section1_normal_dist.html",
+    "href": "section1_normal_dist.html",
+    "title": "5  Normal distribution",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2.html",
+    "href": "section2.html",
+    "title": "Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2_hypo_test.html",
+    "href": "section2_hypo_test.html",
+    "title": "6  Hypothesis testing",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2_proportions.html",
+    "href": "section2_proportions.html",
+    "title": "7  Proportions",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2_tables.html",
+    "href": "section2_tables.html",
+    "title": "8  Tables, chi-sq, exact tests",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2_nonpara.html",
+    "href": "section2_nonpara.html",
+    "title": "9  Non-parametric methods",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section2_samplesize.html",
+    "href": "section2_samplesize.html",
+    "title": "10  Sample size and power",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "section3.html",
+    "href": "section3.html",
+    "title": "Section 3",
+    "section": "",
+    "text": "Regression"
   }
 ]

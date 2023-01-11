@@ -1,9 +1,9 @@
-# Preface {.unnumbered}
+# About {.unnumbered}
 
-This is a Quarto book.
+This is the lecture notes for the course:  **Introductory Statistics MF9130/MF9130E** at the Faculty of Medicine, University of Oslo. 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This website is currently under development. 
 
-```{r}
-1 + 1
-```
+Official course website and material please check [here](https://www.uio.no/studier/emner/medisin/med/MF9130/). 
+
+

@@ -3,12 +3,29 @@ project:
   output-dir: docs
 
 book:
-  title: "book_test"
-  author: "Jane Doe"
-  date: "1/11/2023"
+  title: "Lecture Notes for MF9130/9130E"
+  author: "Chi Zhang"
+  site-url: https://andreaczhang.github.io/teaching_mf9130/
+  repo-url: https://github.com/andreaczhang/teaching_mf9130
   chapters:
     - index.qmd
     - intro.qmd
+    - part: section1.qmd
+      chapters:
+        - section1_descrpt_stat.qmd
+        - section1_probability.qmd
+        - section1_binom_dist.qmd
+        - section1_normal_dist.qmd
+
+    - part: section2.qmd
+      chapters:
+        - section2_hypo_test.qmd
+        - section2_proportions.qmd
+        - section2_tables.qmd
+        - section2_nonpara.qmd
+        - section2_samplesize.qmd
+
+    - part: section3.qmd
     - summary.qmd
     - references.qmd
 
