@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -190,7 +191,35 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#basic-concepts" id="toc-basic-concepts" class="nav-link active" data-scroll-target="#basic-concepts"><span class="toc-section-number">3.1</span>  Basic concepts</a>
+  <ul class="collapse">
+  <li><a href="#brief-history" id="toc-brief-history" class="nav-link" data-scroll-target="#brief-history"><span class="toc-section-number">3.1.1</span>  Brief history</a></li>
+  <li><a href="#bayesian-and-frequentist-probability" id="toc-bayesian-and-frequentist-probability" class="nav-link" data-scroll-target="#bayesian-and-frequentist-probability"><span class="toc-section-number">3.1.2</span>  Bayesian and frequentist probability</a></li>
+  <li><a href="#law-of-large-numbers" id="toc-law-of-large-numbers" class="nav-link" data-scroll-target="#law-of-large-numbers"><span class="toc-section-number">3.1.3</span>  Law of Large Numbers</a></li>
+  </ul></li>
+  <li><a href="#probability-calculation" id="toc-probability-calculation" class="nav-link" data-scroll-target="#probability-calculation"><span class="toc-section-number">3.2</span>  Probability calculation</a>
+  <ul class="collapse">
+  <li><a href="#events-and-sample-space-stochastic-trial" id="toc-events-and-sample-space-stochastic-trial" class="nav-link" data-scroll-target="#events-and-sample-space-stochastic-trial"><span class="toc-section-number">3.2.1</span>  Events and sample space, stochastic trial</a></li>
+  <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link" data-scroll-target="#venn-diagram"><span class="toc-section-number">3.2.2</span>  Venn diagram</a></li>
+  <li><a href="#calculation-rules" id="toc-calculation-rules" class="nav-link" data-scroll-target="#calculation-rules"><span class="toc-section-number">3.2.3</span>  Calculation rules</a></li>
+  </ul></li>
+  <li><a href="#conditional-probability" id="toc-conditional-probability" class="nav-link" data-scroll-target="#conditional-probability"><span class="toc-section-number">3.3</span>  Conditional probability</a>
+  <ul class="collapse">
+  <li><a href="#stochastic-independence" id="toc-stochastic-independence" class="nav-link" data-scroll-target="#stochastic-independence"><span class="toc-section-number">3.3.1</span>  Stochastic independence</a></li>
+  </ul></li>
+  <li><a href="#total-probability-bayes-theorem" id="toc-total-probability-bayes-theorem" class="nav-link" data-scroll-target="#total-probability-bayes-theorem"><span class="toc-section-number">3.4</span>  Total probability, Bayes’ theorem</a></li>
+  <li><a href="#diagnostic-testing" id="toc-diagnostic-testing" class="nav-link" data-scroll-target="#diagnostic-testing"><span class="toc-section-number">3.5</span>  Diagnostic testing</a>
+  <ul class="collapse">
+  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts"><span class="toc-section-number">3.5.1</span>  Concepts</a></li>
+  <li><a href="#computation-of-ppv-npv-and-prevalence" id="toc-computation-of-ppv-npv-and-prevalence" class="nav-link" data-scroll-target="#computation-of-ppv-npv-and-prevalence"><span class="toc-section-number">3.5.2</span>  Computation of PPV, NPV and prevalence</a></li>
+  </ul></li>
+  <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics"><span class="toc-section-number">3.6</span>  Bayesian statistics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -215,13 +244,334 @@ ul.task-list li input[type="checkbox"] {
 <p>Topics:</p>
 <ul>
 <li>Probability concepts</li>
-<li>Conditional probability</li>
-<li>Total probability</li>
-<li>Bayes’ Rule</li>
-<li>Sensitivity, specificity and beyond</li>
+<li>Probability calculation</li>
+<li>Conditional and total probability</li>
+<li>Bayes’ theorem</li>
+<li>Diagnostic testing, sensitivity, specificity, positive and negative predictive value</li>
 </ul>
+<p>Books and resources:</p>
+<ul>
+<li>Aalen 3.1-3.7</li>
+<li>Kirkwood and Sterne 14</li>
+</ul>
+<section id="basic-concepts" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="basic-concepts"><span class="header-section-number">3.1</span> Basic concepts</h2>
+<p>Probability expresses a potential for something to happen.</p>
+<p>It corresponds to the concept of <strong>risk</strong> in medicine</p>
+<p>It is an assessment of <strong>uncertainty</strong> in a situation or event</p>
+<section id="brief-history" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="brief-history"><span class="header-section-number">3.1.1</span> Brief history</h3>
+<p><strong>Blaise Pascal</strong> (17th century): founder of probabiliy theory. Motivated by dice and card games</p>
+<p><strong>Andrey Kolmogorov</strong> (1933): formulated the rules</p>
+</section>
+<section id="bayesian-and-frequentist-probability" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="bayesian-and-frequentist-probability"><span class="header-section-number">3.1.2</span> Bayesian and frequentist probability</h3>
+<p>Bayesian definition: <strong>Degree of belief</strong> that some event will occur</p>
+<p>Frequentis definition: <strong>Proportions of times</strong> that some event occurred in a large number of similar repeated trials</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Why there would be the two schools, key difference, and why we focus on frequentist</p>
+</div>
+</div>
+</section>
+<section id="law-of-large-numbers" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="law-of-large-numbers"><span class="header-section-number">3.1.3</span> Law of Large Numbers</h3>
+<p>Frequency of an event is the proportion of times that the event does occur - interpreted as a probability</p>
+<p>LLN: As an experiment is repeated over and over, the observed frequency approaches the actual probability (true probability). Probability as limit of frequency</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Check the example (Child birth)</p>
+<p>How frequency is linked to LLN. ‘True probability’</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Child birth example</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Coin tossing</p>
+</div>
+</div>
+</section>
+</section>
+<section id="probability-calculation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="probability-calculation"><span class="header-section-number">3.2</span> Probability calculation</h2>
+<section id="events-and-sample-space-stochastic-trial" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="events-and-sample-space-stochastic-trial"><span class="header-section-number">3.2.1</span> Events and sample space, stochastic trial</h3>
+<ul>
+<li>(what is)</li>
+<li>uncertain oucome</li>
+</ul>
+<p>All possible outcomes make up the sample space, where each outcome has a probability of occurrrence</p>
+<p>The sum of all probabilities in the sample space equals 1</p>
+<p>An event is a single outcome (or a collection of outcomes??)</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section need to be better explained</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dice tossing</p>
+<p>Child birth</p>
+<p>Diastolic blood pressure</p>
+</div>
+</div>
+</section>
+<section id="venn-diagram" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="venn-diagram"><span class="header-section-number">3.2.2</span> Venn diagram</h3>
+<p>Often used to illustrate events and sample space</p>
+<p><img src="figures/Figur3-1e.png" class="img-fluid"></p>
+<p>A and B are events, S is the sample space</p>
+<p>Operators on events</p>
+<ul>
+<li>Union: <span class="math inline">\(A \cup B\)</span></li>
+<li>Intersection: <span class="math inline">\(A \cap B\)</span></li>
+<li>Combining operators: <span class="math inline">\(A \cap \bar{B}\)</span></li>
+</ul>
+</section>
+<section id="calculation-rules" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="calculation-rules"><span class="header-section-number">3.2.3</span> Calculation rules</h3>
+<p>The probability of event A is denoted by <span class="math inline">\(P(A)\)</span>. It is between 0 and 1</p>
+<p>The probability over the whole sample space equals 1</p>
+<p><strong>Complement rule</strong></p>
+<p><span class="math display">\[P(A) + P(\bar{A}) = 1\]</span></p>
+<p><strong>Additive rule</strong></p>
+<p>The occurrence of at least one of the events A or B is <span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span> For <strong>disjunct</strong> events A, B, <span class="math inline">\(P(A \cap B) = 0\)</span>. Hence <span class="math display">\[P(A \cup B) = P(A) + P(B)\]</span></p>
+<p><strong>Multiplicative rule</strong></p>
+<p>Probability of independent events can be multiplied</p>
+<p><span class="math display">\[P(A \cap B) = P(A) \times P(B)\]</span> Examples: gender of the child in 2 births, throw of 2 dices</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Child birth</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dice tossing</p>
+</div>
+</div>
+</section>
+</section>
+<section id="conditional-probability" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="conditional-probability"><span class="header-section-number">3.3</span> Conditional probability</h2>
+<p>What is the probability of getting an outcome A given that it will at least occur in B? <span class="math inline">\(P(A|B)\)</span></p>
+<p>Rescale the probability of events in B: such that the new sample space has probability 1, then</p>
+<p><span class="math display">\[\frac{P(A \cap B)}{P(B)}\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>weather forecast</p>
+</div>
+</div>
+<section id="stochastic-independence" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="stochastic-independence"><span class="header-section-number">3.3.1</span> Stochastic independence</h3>
+<p>A and B are independent if</p>
+<p><span class="math display">\[P(A|B) = P(A)\]</span> Interpretation: probability of A is the same if we also know B occurs</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Appendicitis</p>
+<p>Influenza</p>
+</div>
+</div>
+<p>Calculations can be simplified if there is stochastic independence</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Child birth (revisited)</p>
+<p>Dice (revisited)</p>
+</div>
+</div>
+</section>
+</section>
+<section id="total-probability-bayes-theorem" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="total-probability-bayes-theorem"><span class="header-section-number">3.4</span> Total probability, Bayes’ theorem</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Motivation for this section</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Gender of twins</p>
+</div>
+</div>
+</section>
+<section id="diagnostic-testing" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="diagnostic-testing"><span class="header-section-number">3.5</span> Diagnostic testing</h2>
+<section id="concepts" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="concepts"><span class="header-section-number">3.5.1</span> Concepts</h3>
+<p>Sensitivity</p>
+<p>Specificity</p>
+<p>Positive predictive value</p>
+<p>Negative predictive value</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mammography</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>HIV testing</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ELISA test</p>
+</div>
+</div>
+</section>
+<section id="computation-of-ppv-npv-and-prevalence" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="computation-of-ppv-npv-and-prevalence"><span class="header-section-number">3.5.2</span> Computation of PPV, NPV and prevalence</h3>
+<p>Application of Bayes’ theorem</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>HIV testing (revisited)</p>
+</div>
+</div>
+</section>
+</section>
+<section id="bayesian-statistics" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="bayesian-statistics"><span class="header-section-number">3.6</span> Bayesian statistics</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

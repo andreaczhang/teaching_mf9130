@@ -110,5 +110,110 @@
     "title": "Section 3",
     "section": "",
     "text": "Regression"
+  },
+  {
+    "objectID": "section1_probability.html#concept",
+    "href": "section1_probability.html#concept",
+    "title": "3  Probability",
+    "section": "3.1 Concept",
+    "text": "3.1 Concept"
+  },
+  {
+    "objectID": "section1_probability.html#basic-concepts",
+    "href": "section1_probability.html#basic-concepts",
+    "title": "3  Probability",
+    "section": "3.1 Basic concepts",
+    "text": "3.1 Basic concepts\nProbability expresses a potential for something to happen.\nIt corresponds to the concept of risk in medicine\nIt is an assessment of uncertainty in a situation or event\n\n3.1.1 Brief history\nBlaise Pascal (17th century): founder of probabiliy theory. Motivated by dice and card games\nAndrey Kolmogorov (1933): formulated the rules\n\n\n3.1.2 Bayesian and frequentist probability\nBayesian definition: Degree of belief that some event will occur\nFrequentis definition: Proportions of times that some event occurred in a large number of similar repeated trials\n\n\n\n\n\n\nExplain\n\n\n\nWhy there would be the two schools, key difference, and why we focus on frequentist\n\n\n\n\n3.1.3 Law of Large Numbers\nFrequency of an event is the proportion of times that the event does occur - interpreted as a probability\nLLN: As an experiment is repeated over and over, the observed frequency approaches the actual probability (true probability). Probability as limit of frequency\n\n\n\n\n\n\nExplain\n\n\n\nCheck the example (Child birth)\nHow frequency is linked to LLN. ‘True probability’\n\n\n\n\n\n\n\n\nExample\n\n\n\nChild birth example\n\n\n\n\n\n\n\n\nExample\n\n\n\nCoin tossing"
+  },
+  {
+    "objectID": "section1_probability.html#probability-calculation",
+    "href": "section1_probability.html#probability-calculation",
+    "title": "3  Probability",
+    "section": "3.2 Probability calculation",
+    "text": "3.2 Probability calculation\n\n3.2.1 Events and sample space, stochastic trial\n\n(what is)\nuncertain oucome\n\nAll possible outcomes make up the sample space, where each outcome has a probability of occurrrence\nThe sum of all probabilities in the sample space equals 1\nAn event is a single outcome (or a collection of outcomes??)\n\n\n\n\n\n\nExplain\n\n\n\nThis section need to be better explained\n\n\n\n\n\n\n\n\nExamples\n\n\n\nDice tossing\nChild birth\nDiastolic blood pressure\n\n\n\n\n3.2.2 Venn diagram\nOften used to illustrate events and sample space\n\nA and B are events, S is the sample space\nOperators on events\n\nUnion: \\(A \\cup B\\)\nIntersection: \\(A \\cap B\\)\nCombining operators: \\(A \\cap \\bar{B}\\)\n\n\n\n3.2.3 Calculation rules\nThe probability of event A is denoted by \\(P(A)\\). It is between 0 and 1\nThe probability over the whole sample space equals 1\nComplement rule\n\\[P(A) + P(\\bar{A}) = 1\\]\nAdditive rule\nThe occurrence of at least one of the events A or B is \\[P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\] For disjunct events A, B, \\(P(A \\cap B) = 0\\). Hence \\[P(A \\cup B) = P(A) + P(B)\\]\nMultiplicative rule\nProbability of independent events can be multiplied\n\\[P(A \\cap B) = P(A) \\times P(B)\\] Examples: gender of the child in 2 births, throw of 2 dices\n\n\n\n\n\n\nExamples\n\n\n\nChild birth\n\n\n\n\n\n\n\n\nExamples\n\n\n\nDice tossing"
+  },
+  {
+    "objectID": "section1_probability.html#conditional-probability",
+    "href": "section1_probability.html#conditional-probability",
+    "title": "3  Probability",
+    "section": "3.3 Conditional probability",
+    "text": "3.3 Conditional probability\nWhat is the probability of getting an outcome A given that it will at least occur in B? \\(P(A|B)\\)\nRescale the probability of events in B: such that the new sample space has probability 1, then\n\\[\\frac{P(A \\cap B)}{P(B)}\\]\n\n\n\n\n\n\nExercise\n\n\n\nweather forecast\n\n\n\n3.3.1 Stochastic independence\nA and B are independent if\n\\[P(A|B) = P(A)\\] Interpretation: probability of A is the same if we also know B occurs\n\n\n\n\n\n\nExamples\n\n\n\nAppendicitis\nInfluenza\n\n\nCalculations can be simplified if there is stochastic independence\n\n\n\n\n\n\nExamples\n\n\n\nChild birth (revisited)\nDice (revisited)"
+  },
+  {
+    "objectID": "section1_probability.html#total-probability",
+    "href": "section1_probability.html#total-probability",
+    "title": "3  Probability",
+    "section": "3.4 Total probability",
+    "text": "3.4 Total probability\n\n\n\n\n\n\nExplain\n\n\n\nMotivation for this section\n\n\n\n\n\n\n\n\nExample\n\n\n\nGender of twins"
+  },
+  {
+    "objectID": "section1_probability.html#bayes-theorem",
+    "href": "section1_probability.html#bayes-theorem",
+    "title": "3  Probability",
+    "section": "3.5 Bayes’ theorem",
+    "text": "3.5 Bayes’ theorem"
+  },
+  {
+    "objectID": "section1_probability.html#diagnostic-testing",
+    "href": "section1_probability.html#diagnostic-testing",
+    "title": "3  Probability",
+    "section": "3.5 Diagnostic testing",
+    "text": "3.5 Diagnostic testing\n\n3.5.1 Concepts\nSensitivity\nSpecificity\nPositive predictive value\nNegative predictive value\n\n\n\n\n\n\nExample\n\n\n\nMammography\n\n\n\n\n\n\n\n\nExample\n\n\n\nHIV testing\n\n\n\n\n\n\n\n\nExample\n\n\n\nELISA test\n\n\n\n\n3.5.2 Computation of PPV, NPV and prevalence\nApplication of Bayes’ theorem\n\n\n\n\n\n\nExample\n\n\n\nHIV testing (revisited)"
+  },
+  {
+    "objectID": "section1_probability.html#bayesian-statistics",
+    "href": "section1_probability.html#bayesian-statistics",
+    "title": "3  Probability",
+    "section": "3.6 Bayesian statistics",
+    "text": "3.6 Bayesian statistics"
+  },
+  {
+    "objectID": "section1_binom_dist.html#random-trial",
+    "href": "section1_binom_dist.html#random-trial",
+    "title": "4  Binomial distribution",
+    "section": "4.1 Random trial",
+    "text": "4.1 Random trial"
+  },
+  {
+    "objectID": "section1_binom_dist.html#probability-distribution",
+    "href": "section1_binom_dist.html#probability-distribution",
+    "title": "4  Binomial distribution",
+    "section": "4.1 Probability distribution",
+    "text": "4.1 Probability distribution\nRandom (stochastic) trial: we do not know the outcome, but we know the set of possible outcomes\nRandom variable: number linked to the outcome\nProbability distribution: set of probabilities for each of the possible outcomes\n\n4.1.1 Bernoulli trials\nOften a process has two outcomes.\n\nCoin tossing: outcomes are head or tail\nHIV test looks for the presence or absence of antibodies in the blood\n\nTwo outcomes of interest:\n\nthrow a dice, you are only interested in whether you get a 6 or not\n\n\n\n4.1.2 Binomial trials\nA series of random trials that satisfy:\n\nin each trial, record whether event A occurs or not\nthe probability of A, \\(P(A)\\) is the same in each trial, it is denoted by \\(p\\)\nall trials are independent\n\nSuppose you carry out n trials, looking for an event A in each trial. The result of a sequence:\n\\[A, \\bar{A}, A, A, \\bar{A}, ..., A\\] Say that \\(A\\) takes place \\(x\\) times. This means \\(\\bar{A}\\) takes place \\(n-x\\) times.\nWhat is the probability for a certain sequence?\nRecall that probabilities for independent events can be multiplied.\n\\[P(sequence) = p \\times (1-p) \\times p ...\\] For \\(x\\) number of \\(p\\) and \\(n-x\\) number of \\(1-p\\),\n\\[P(sequence) = p^{x} (1-p)^{n-x}\\] The order of the sequence does not matter. The number of occurence matters.\n\n\n4.1.3 Binomial coefficient\nWe want to find the number of ways that \\(x\\) objects can be chosen from a tottal of \\(n\\) objects, regardless of order\nBinomial coefficient: \\(\\binom nx\\)\n\\[\\binom nx = \\frac{n!}{x!(n-x)!}\\] “x factorial”: \\(x! = x \\times (x-1) \\times ... 2 \\times 1\\)\nExample: \\(\\binom 4 3 = \\frac{4\\times 3 \\times 2 \\times 1}{3 \\times 2 \\times 1 \\times 1} = 4\\)"
+  },
+  {
+    "objectID": "section1_binom_dist.html#random-trails-and-counting",
+    "href": "section1_binom_dist.html#random-trails-and-counting",
+    "title": "4  Binomial distribution",
+    "section": "4.1 Random trails and counting",
+    "text": "4.1 Random trails and counting\nRandom (stochastic) trial: we do not know the outcome, but we know the set of possible outcomes\nRandom variable: number linked to the outcome\nProbability distribution: set of probabilities for each of the possible outcomes\n\n4.1.1 Bernoulli trials\nOften a process has two outcomes.\n\nCoin tossing: outcomes are head or tail\nHIV test looks for the presence or absence of antibodies in the blood\n\nTwo outcomes of interest:\n\nthrow a dice, you are only interested in whether you get a 6 or not\n\n\n\n4.1.2 Binomial trials\nA series of random trials that satisfy:\n\nin each trial, record whether event A occurs or not\nthe probability of A, \\(P(A)\\) is the same in each trial, it is denoted by \\(p\\)\nall trials are independent\n\nSuppose you carry out n trials, looking for an event A in each trial. The result of a sequence:\n\\[A, \\bar{A}, A, A, \\bar{A}, ..., A\\] Say that \\(A\\) takes place \\(x\\) times. This means \\(\\bar{A}\\) takes place \\(n-x\\) times.\nWhat is the probability for a certain sequence?\nRecall that probabilities for independent events can be multiplied.\n\\[P(sequence) = p \\times (1-p) \\times p ...\\] For \\(x\\) number of \\(p\\) and \\(n-x\\) number of \\(1-p\\),\n\\[P(sequence) = p^{x} (1-p)^{n-x}\\] The order of the sequence does not matter. The number of occurence matters.\n\n\n4.1.3 Binomial coefficient\nWe want to find the number of ways that \\(x\\) objects can be chosen from a tottal of \\(n\\) objects, regardless of order\nBinomial coefficient: \\(\\binom nx\\)\n\\[\\binom nx = \\frac{n!}{x!(n-x)!}\\] “x factorial”: \\(x! = x \\times (x-1) \\times ... 2 \\times 1\\)\nExample: \\(\\binom 4 3 = \\frac{4\\times 3 \\times 2 \\times 1}{3 \\times 2 \\times 1 \\times 1} = 4\\)"
+  },
+  {
+    "objectID": "section1_binom_dist.html#binomial-distribution",
+    "href": "section1_binom_dist.html#binomial-distribution",
+    "title": "4  Binomial distribution",
+    "section": "4.3 Binomial distribution",
+    "text": "4.3 Binomial distribution\nThe probability that \\(A\\) occurs exact \\(x\\) times is given by\n\\[P(X = x) = \\binom n x p^{x}(1-p)^{n-x}\\]\ni.e. the number of distributing \\(x\\) events in a sequence of length \\(n\\), times the probability that one particular sequence with \\(x\\) events occurs.\n\n\n\n\n\n\nExplain\n\n\n\nExplain what it means to multiply these two components, and how it is related to frequency\n\n\n\n4.3.1 Examples\n\n\n\n\n\n\nExample, derivation\n\n\n\nBlood type example. Demonstrate counting, and how it leads to binomial distribution with 4 outcomes\n\n\n\n\n\n\n\n\nExample\n\n\n\nFamily with 4 kids, 2 boys. Compare theoretical and real-life percentage\n\n\n\n\n\n\n\n\nExample\n\n\n\nMultiple choice exam\n\n\n\n\n4.3.2 Visualize binomial distribution\n\n\n\n\n\n\nExplain (might put it in another section)\n\n\n\nRevisit the definition of mean variance, and relation to descriptive summary statistics\nDemo computation on a few different parameters"
+  },
+  {
+    "objectID": "section1_probability.html#total-probability-bayes-theorem",
+    "href": "section1_probability.html#total-probability-bayes-theorem",
+    "title": "3  Probability",
+    "section": "3.4 Total probability, Bayes’ theorem",
+    "text": "3.4 Total probability, Bayes’ theorem\n\n\n\n\n\n\nExplain\n\n\n\nMotivation for this section\n\n\n\n\n\n\n\n\nExample\n\n\n\nGender of twins"
+  },
+  {
+    "objectID": "section1_binom_dist.html#random-variable-and-distribution",
+    "href": "section1_binom_dist.html#random-variable-and-distribution",
+    "title": "4  Binomial distribution",
+    "section": "4.1 Random variable and distribution",
+    "text": "4.1 Random variable and distribution\nRandom (stochastic) trial: we do not know the outcome, but we know the set of possible outcomes\nRandom variable: number linked to the outcome\nProbability distribution: set of probabilities for each of the possible outcomes\nProperties of probability distribution\nsum up to 1\nmean, variance, pmf/pdf"
+  },
+  {
+    "objectID": "section1_binom_dist.html#random-trials-and-counting",
+    "href": "section1_binom_dist.html#random-trials-and-counting",
+    "title": "4  Binomial distribution",
+    "section": "4.2 Random trials and counting",
+    "text": "4.2 Random trials and counting\n\n4.2.1 Bernoulli trials\nOften a process has two outcomes.\n\nCoin tossing: outcomes are head or tail\nHIV test looks for the presence or absence of antibodies in the blood\n\nTwo outcomes of interest:\n\nthrow a dice, you are only interested in whether you get a 6 or not\n\n\n\n4.2.2 Binomial trials\nA series of random trials that satisfy:\n\nin each trial, record whether event A occurs or not\nthe probability of A, \\(P(A)\\) is the same in each trial, it is denoted by \\(p\\)\nall trials are independent\n\nSuppose you carry out n trials, looking for an event A in each trial. The result of a sequence:\n\\[A, \\bar{A}, A, A, \\bar{A}, ..., A\\] Say that \\(A\\) takes place \\(x\\) times. This means \\(\\bar{A}\\) takes place \\(n-x\\) times.\nWhat is the probability for a certain sequence?\nRecall that probabilities for independent events can be multiplied.\n\\[P(sequence) = p \\times (1-p) \\times p ...\\] For \\(x\\) number of \\(p\\) and \\(n-x\\) number of \\(1-p\\),\n\\[P(sequence) = p^{x} (1-p)^{n-x}\\] The order of the sequence does not matter. The number of occurence matters.\n\n\n4.2.3 Binomial coefficient\nWe want to find the number of ways that \\(x\\) objects can be chosen from a total of \\(n\\) objects, regardless of order\nBinomial coefficient: \\(\\binom nx\\)\n\\[\\binom nx = \\frac{n!}{x!(n-x)!}\\] “x factorial”: \\(x! = x \\times (x-1) \\times ... 2 \\times 1\\)\nExample: \\(\\binom 4 3 = \\frac{4\\times 3 \\times 2 \\times 1}{3 \\times 2 \\times 1 \\times 1} = 4\\)"
   }
 ]

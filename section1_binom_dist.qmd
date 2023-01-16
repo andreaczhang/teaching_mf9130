@@ -5,3 +5,139 @@ Topics:
 - Discrete probability distribution
 - Binomial trials and coefficients
 - Binomial distribution
+
+
+Books and resources: 
+
+- Aalen 4
+- Kirkwood and Sterne 15.1-15.2
+
+
+## Random variable and distribution
+
+Random (stochastic) trial: we do not know the outcome, but we know the set of possible outcomes
+
+Random variable: number linked to the outcome
+
+Probability distribution: set of probabilities for each of the possible outcomes
+
+
+Properties of probability distribution
+
+sum up to 1 
+
+mean, variance, pmf/pdf
+
+
+## Random trials and counting
+
+### Bernoulli trials
+
+Often a process has two outcomes. 
+
+- Coin tossing: outcomes are **head or tail**
+- HIV test looks for the **presence or absence** of antibodies in the blood
+
+Two outcomes of interest:
+
+- throw a dice, you are only interested in whether you get a 6 or not
+
+
+
+
+### Binomial trials
+
+**A series of random trials** that satisfy:
+
+- in each trial, record whether event A occurs or not 
+- the probability of A, $P(A)$ is the same in each trial, it is denoted by $p$
+- all trials are independent
+
+
+Suppose you carry out n trials, looking for an event A in each trial. The result of a sequence: 
+
+$$A, \bar{A}, A, A, \bar{A}, ..., A$$
+Say that $A$ takes place $x$ times. This means $\bar{A}$ takes place $n-x$ times.
+
+What is the probability for a certain sequence?
+
+Recall that probabilities for independent events can be multiplied.
+
+$$P(sequence) = p \times (1-p) \times p ...$$
+For $x$ number of $p$ and $n-x$ number of $1-p$, 
+
+$$P(sequence) = p^{x} (1-p)^{n-x}$$
+The order of the sequence does not matter. The number of occurence matters.
+
+### Binomial coefficient
+
+We want to find the number of ways that $x$ objects can be chosen from a total of $n$ objects, regardless of order
+
+Binomial coefficient: $\binom nx$
+
+$$\binom nx = \frac{n!}{x!(n-x)!}$$
+"x factorial": $x! = x \times (x-1) \times ... 2 \times 1$
+
+Example: $\binom 4 3 = \frac{4\times 3 \times 2 \times 1}{3 \times 2 \times 1 \times 1} = 4$
+
+
+
+## Binomial distribution 
+
+The probability that $A$ occurs exact $x$ times is given by 
+
+$$P(X = x) = \binom n x p^{x}(1-p)^{n-x}$$
+
+i.e. the number of distributing $x$ events in a sequence of length $n$, times the probability that one particular sequence with $x$ events occurs.
+
+::: {.callout-important}
+#### Explain
+
+Explain what it means to multiply these two components, and how it is related to frequency
+:::
+
+
+
+### Examples
+
+::: {.callout-note}
+#### Example, derivation
+
+Blood type example. Demonstrate counting,  and how it leads to binomial distribution with 4 outcomes
+:::
+
+
+
+::: {.callout-note}
+#### Example
+
+Family with 4 kids, 2 boys. Compare theoretical and real-life percentage
+:::
+
+
+::: {.callout-note}
+#### Example
+
+Multiple choice exam
+:::
+
+
+### Visualize binomial distribution
+
+
+::: {.callout-important}
+#### Explain (might put it in another section)
+
+Revisit the definition of mean variance, and relation to descriptive summary statistics
+
+Demo computation on a few different parameters
+:::
+
+
+
+
+
+
+
+
+
