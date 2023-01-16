@@ -19,7 +19,7 @@ Random (stochastic) trial: we do not know the outcome, but we know the set of po
 
 Random variable: number linked to the outcome
 
-Probability distribution: set of probabilities for each of the possible outcomes
+**Probability distribution**: set of probabilities for each of the possible outcomes
 
 
 Properties of probability distribution
