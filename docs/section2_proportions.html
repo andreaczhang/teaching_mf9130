@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Notes for MF9130/9130E - 7&nbsp; Proportions</title>
+<title>Lecture Notes for MF9130/9130E - 7&nbsp; Analysis of proportions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -71,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proportions</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of proportions</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -152,12 +153,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proportions</span></a>
+  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></a>
+  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -190,14 +191,39 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#proportions" id="toc-proportions" class="nav-link active" data-scroll-target="#proportions"><span class="toc-section-number">7.1</span>  Proportions</a>
+  <ul class="collapse">
+  <li><a href="#proportion-and-binomial-distribution" id="toc-proportion-and-binomial-distribution" class="nav-link" data-scroll-target="#proportion-and-binomial-distribution"><span class="toc-section-number">7.1.1</span>  Proportion and binomial distribution</a></li>
+  <li><a href="#uncertainty-of-a-proportion" id="toc-uncertainty-of-a-proportion" class="nav-link" data-scroll-target="#uncertainty-of-a-proportion"><span class="toc-section-number">7.1.2</span>  Uncertainty of a proportion</a></li>
+  </ul></li>
+  <li><a href="#test-for-one-proportion" id="toc-test-for-one-proportion" class="nav-link" data-scroll-target="#test-for-one-proportion"><span class="toc-section-number">7.2</span>  Test for one proportion</a></li>
+  <li><a href="#comparing-two-proportions" id="toc-comparing-two-proportions" class="nav-link" data-scroll-target="#comparing-two-proportions"><span class="toc-section-number">7.3</span>  Comparing two proportions</a>
+  <ul class="collapse">
+  <li><a href="#times-2-contingency-table" id="toc-times-2-contingency-table" class="nav-link" data-scroll-target="#times-2-contingency-table"><span class="toc-section-number">7.3.1</span>  2 <span class="math inline">\(\times\)</span> 2 contingency table</a></li>
+  <li><a href="#risk-difference" id="toc-risk-difference" class="nav-link" data-scroll-target="#risk-difference"><span class="toc-section-number">7.3.2</span>  Risk difference</a></li>
+  </ul></li>
+  <li><a href="#relative-risk" id="toc-relative-risk" class="nav-link" data-scroll-target="#relative-risk"><span class="toc-section-number">7.4</span>  Relative risk</a>
+  <ul class="collapse">
+  <li><a href="#confidence-interval-for-the-relative-risk" id="toc-confidence-interval-for-the-relative-risk" class="nav-link" data-scroll-target="#confidence-interval-for-the-relative-risk"><span class="toc-section-number">7.4.1</span>  Confidence interval for the relative risk</a></li>
+  </ul></li>
+  <li><a href="#odds-and-odds-ratio" id="toc-odds-and-odds-ratio" class="nav-link" data-scroll-target="#odds-and-odds-ratio"><span class="toc-section-number">7.5</span>  Odds and odds ratio</a>
+  <ul class="collapse">
+  <li><a href="#odds-ratio" id="toc-odds-ratio" class="nav-link" data-scroll-target="#odds-ratio"><span class="toc-section-number">7.5.1</span>  Odds ratio</a></li>
+  <li><a href="#confidence-interval-for-or" id="toc-confidence-interval-for-or" class="nav-link" data-scroll-target="#confidence-interval-for-or"><span class="toc-section-number">7.5.2</span>  Confidence interval for OR</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proportions</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of proportions</span></h1>
 </div>
 
 
@@ -215,13 +241,279 @@ ul.task-list li input[type="checkbox"] {
 <p>Topics:</p>
 <ul>
 <li>Proportions</li>
-<li>Tests</li>
-<li>Comparingg two proportions</li>
-<li>Odds ratio</li>
-<li>Relative risk</li>
+<li>Test one proportion</li>
+<li>Comparing two proportions</li>
+<li>Relative risk, odds ratio</li>
 </ul>
+<p>Books and resources:</p>
+<ul>
+<li>Aalen 6.1-6.4</li>
+<li>Kirkwood and Sterne 14-16</li>
+</ul>
+<section id="proportions" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="proportions"><span class="header-section-number">7.1</span> Proportions</h2>
+<section id="proportion-and-binomial-distribution" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="proportion-and-binomial-distribution"><span class="header-section-number">7.1.1</span> Proportion and binomial distribution</h3>
+<p>Deonte two possible outcomes of a binary variable by <strong>D (disease)</strong> and <strong>H (healthy)</strong>. We want to study the probability, or <strong>risk</strong> <span class="math inline">\(\pi\)</span>, that D occurs in the <strong>population</strong>.</p>
+<p>The <strong>sample proportion</strong> <span class="math inline">\(p\)</span> is defined as the proportion of individuals in the sample in category D,</p>
+<p><span class="math display">\[p = \frac{d}{n}\]</span> where <span class="math inline">\(d\)</span> is the number of subjects in D, <span class="math inline">\(n\)</span> is the total number in the sample.</p>
+<p>Recall that the sampling distribution of a proportion is the <strong>binomial distribution</strong>:</p>
+<ul>
+<li>independent experiments</li>
+<li>two outcomes: success or not</li>
+<li>probability of success is the same in all experiments</li>
+<li>probability of success <span class="math inline">\(+\)</span> probability of no success <span class="math inline">\(=1\)</span></li>
+</ul>
+<p>The probability of getting exactly <span class="math inline">\(d\)</span> events in a sample of <span class="math inline">\(n\)</span> individuals is</p>
+<p><span class="math display">\[P(d) = \binom nd \pi^{d}(1-\pi)^{n-d}\]</span></p>
+<p>Goal: estimate the <u>true, unknown</u> population risk (probability) <span class="math inline">\(\pi\)</span> using <span class="math inline">\(p\)</span>.</p>
+<p>Also would like to know the uncertainty of <span class="math inline">\(p\)</span>: how far does it differ from <span class="math inline">\(\pi\)</span>?</p>
+</section>
+<section id="uncertainty-of-a-proportion" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="uncertainty-of-a-proportion"><span class="header-section-number">7.1.2</span> Uncertainty of a proportion</h3>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>check the def of se, distinguish from sd;</p>
+<p>also double check how to explain the estimation using sample proportion</p>
+<p>make sure to explain when and where <span class="math inline">\(\pi, p\)</span> are appropriate</p>
+</div>
+</div>
+<p>The <strong>standard error</strong> of the proportion of D in a sample of size <span class="math inline">\(n\)</span> is</p>
+<p><span class="math display">\[s.e. = \sqrt{\frac{\pi (1-\pi)}{n}}\]</span> The standard error is <strong>estimated by</strong></p>
+<p><span class="math display">\[\hat{s.e.} = \sqrt{\frac{p (1-p)}{n}}\]</span> where <span class="math inline">\(\pi\)</span> is replaced by <span class="math inline">\(p\)</span></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The normal approximation, how is it applied in computation of CI</p>
+<p>check the histogram as n gets larger</p>
+</div>
+</div>
+<p>When the sample size <span class="math inline">\(n\)</span> increases, the binomial distribution can be approximated by a normal distribution. This is useful for computing <strong>confidence intervals</strong>, and carrying out <strong>hypothesis tests</strong>.</p>
+<p>The approximation is valid when <span class="math inline">\(n\pi\)</span> and <span class="math inline">\(n(1-\pi)\)</span> is greater or equal to 10.</p>
+<p>The <strong>confidence interval for the population probability</strong>, <span class="math inline">\(\pi\)</span> is</p>
+<p><span class="math display">\[\text{CI} = (p - z \times \sqrt{\frac{p(1-p)}{n}}, \quad p + z \times \sqrt{\frac{p(1-p)}{n}})\]</span> where <span class="math inline">\(z\)</span> is the <span class="math inline">\(1-\frac{\alpha}{2}\)</span> quantile of a standard normal distribution.</p>
+<p>For 95% confidence interval, <span class="math inline">\(\alpha = 1-0.95 = 0.05\)</span>, so <span class="math inline">\(1-\frac{\alpha}{2} = 0.975\)</span> and <span class="math inline">\(z = 1.96\)</span>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Smoking habits example</p>
+</div>
+</div>
+</section>
+</section>
+<section id="test-for-one-proportion" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="test-for-one-proportion"><span class="header-section-number">7.2</span> Test for one proportion</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>name of the test, interpretation of the test statistic and p-value</p>
+</div>
+</div>
+<p>Perform a z-test using the approximating normal distribution, to test the <strong>null hypothesis</strong> that <strong>the population proportion equals a pre-specified value</strong>, <span class="math inline">\(\pi_0\)</span>:</p>
+<p><span class="math display">\[H_0: \pi = \pi_0, \quad H_a:\pi \neq\pi_0\]</span></p>
+<p>Providing that both <span class="math inline">\(n\pi_0\)</span> and <span class="math inline">\(n(1-\pi_0)\)</span> are greater than 10, the <strong>test statistic</strong></p>
+<p><span class="math display">\[z = \frac{p-\pi_0}{\sqrt{\pi_0(1-\pi_0)/n}}\]</span> is standard normally distributed.</p>
+<p>From the test statistic we derive a <strong>P-value</strong>, which is the probability that <span class="math inline">\(\pi = \pi_0\)</span>, or more extreme !!!refine this !!!</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Smoking example</p>
+</div>
+</div>
+</section>
+<section id="comparing-two-proportions" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="comparing-two-proportions"><span class="header-section-number">7.3</span> Comparing two proportions</h2>
+<p>Want to compare <strong>two groups</strong> with respect to the occurrence of a binary outcome, e.g.&nbsp;getting a certain disease, or whether a drug is effective:</p>
+<ul>
+<li>Group 1: individuals <strong>exposed</strong> to a risk factor, or <strong>treatment</strong></li>
+<li>Group 0: individuals <strong>unexposed</strong> to a risk factor, or <strong>control/placebo</strong></li>
+</ul>
+<p>There are three common measures for comparing the outcomes between the two groups:</p>
+<ul>
+<li>Risk ratio, or <strong>relative risk</strong></li>
+<li><strong>Odds ratio</strong></li>
+<li>Risk difference (not very used in practice)</li>
+</ul>
+<p>For each measure we can compute a confidence interval, and carry out a hypothesis test.</p>
+<section id="times-2-contingency-table" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="times-2-contingency-table"><span class="header-section-number">7.3.1</span> 2 <span class="math inline">\(\times\)</span> 2 contingency table</h3>
+<p>Individuals are classified according to their exposure and outcome categories. Cross tabulation is used to display the data in a <span class="math inline">\(2 \times 2\)</span> contingency table.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>show table</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Influenza vaccine example</p>
+</div>
+</div>
+</section>
+<section id="risk-difference" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="risk-difference"><span class="header-section-number">7.3.2</span> Risk difference</h3>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>probably wait until the end</p>
+</div>
+</div>
+</section>
+</section>
+<section id="relative-risk" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="relative-risk"><span class="header-section-number">7.4</span> Relative risk</h2>
+<p>For two population proportions <span class="math inline">\(\pi_1, \pi_0\)</span>, the <strong>relative risk</strong>, or <strong>risk ratio</strong> RR is the ratio of the two:</p>
+<p><span class="math display">\[RR = \pi_1/\pi_0\]</span></p>
+<p>It is estimated by</p>
+<p><span class="math display">\[\hat{RR} = \frac{p_1}{p_0} = \frac{d_1/n_1}{d_0/n_0}\]</span> where <span class="math inline">\(p_1, p_0\)</span> are the sample proportions in the exposed and unexposed groups.</p>
+<p>Properties of the relative risk</p>
+<ul>
+<li>RR = 1: the risks (of the outcome) are the same in the two groups</li>
+<li>RR &gt; 1: the risk is higher among those exposed to the risk factor</li>
+<li>RR &lt; 1: the risk is lower among those exposed to the risk factor</li>
+<li>The further RR is from 1, the <strong>stronger the association</strong> between exposure and outcome</li>
+</ul>
+<section id="confidence-interval-for-the-relative-risk" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="confidence-interval-for-the-relative-risk"><span class="header-section-number">7.4.1</span> Confidence interval for the relative risk</h3>
+<p>The 95% confidence interval for the relative risk is</p>
+<p><span class="math display">\[CI = \bigg(exp \bigg\{ log \hat{RR} \pm 1.96 \times \text{s.e.} (log \hat{RR})\bigg\} \bigg)\]</span></p>
+<p>where the estimated standard error of the natural logarithm of the estimated RR is</p>
+<p><span class="math display">\[\hat{\text{s.e.}} (log \hat{RR}) = \sqrt{\frac{1}{d_1} - \frac{1}{n_1}+ \frac{1}{d_0} - \frac{1}{n_0}}\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Association between smoking and lung cancer</p>
+</div>
+</div>
+</section>
+</section>
+<section id="odds-and-odds-ratio" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="odds-and-odds-ratio"><span class="header-section-number">7.5</span> Odds and odds ratio</h2>
+<p>The <strong>odds</strong> of an outcome D (disease) is defined as</p>
+<p><span class="math display">\[\text{Odds} = \frac{P(\text{D happens})}{P(\text{D does not happen})} = \frac{P(D)}{1-P(D)}\]</span> The odds is estimated by</p>
+<p><span class="math display">\[\hat{\text{Odds}} = \frac{p}{1-p} = \frac{d/n}{1-d/n} = \frac{d/n}{h/n} = \frac{d}{h}\]</span> which is the number of individuals who experience the outcome (e.g.&nbsp;disease) divided by the number of those who do not (healthy).</p>
+<section id="odds-ratio" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="odds-ratio"><span class="header-section-number">7.5.1</span> Odds ratio</h3>
+<p>The <strong>odds ratio</strong> OR is the ratio between the odds in the exposed group, and the odds in the unexposed group. It is estimated by</p>
+<p><span class="math display">\[\hat{OR} = \frac{d_1/h_1}{d_0/h_0} = \frac{d_1 \times h_0}{d_0 \times h_1}\]</span> It is the cross-produce ratio of the <span class="math inline">\(2 \times 2\)</span> table.</p>
+<p>OR is one of the most common effect measures in medical statistics, even though it is less intuitive than RR. OR = 1 occurs when the odds (hence proportions) are the same in two groups.</p>
+<p>The OR is always further away from 1 compared to RR. For rare outcomes, OR is approximately equal to the RR.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nausea vs new drug, compute relative risk and odds ratio</p>
+</div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When to choose what measure</p>
+<p>the comparison</p>
+</div>
+</div>
+</section>
+<section id="confidence-interval-for-or" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="confidence-interval-for-or"><span class="header-section-number">7.5.2</span> Confidence interval for OR</h3>
+<p>The 95% confidence interval for the odds ratio OR is</p>
+<p><span class="math display">\[CI = \bigg(exp \bigg\{ log \hat{OR} \pm 1.96 \times \text{s.e.} (log \hat{OR})\bigg\} \bigg)\]</span></p>
+<p>where the estimated standard error of the natural logarithm of the estimated odds ratio is</p>
+<p><span class="math display">\[\hat{\text{s.e.}} (log \hat{OR}) = \sqrt{\frac{1}{d_1} + \frac{1}{h_1}+ \frac{1}{d_0} + \frac{1}{h_0}}\]</span> This is also known as <strong>Woolf’s formula</strong></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Asthma among women and men</p>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -366,7 +658,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./section2_tables.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

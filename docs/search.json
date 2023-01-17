@@ -236,5 +236,96 @@
     "title": "5  Normal distribution",
     "section": "5.3 Normal approximation to the binomial distribution",
     "text": "5.3 Normal approximation to the binomial distribution\nRecall the binomial distribution,\n\\[P(X = x) = \\binom nx p^x (1-p)^{n-x}\\] where \\(\\binom nx = \\frac{n!}{x!(n-x)!}\\), and \\(\\binom n 0 = 1\\)\nFor large \\(n\\), use the normal distribution.\n\n\n5.3.1 Normal vs binomial\nFit a normal distribution to approximate a binomial distribution\n\n\\(\\mu = np\\)\n\\(\\sigma = \\sqrt{np(1-p)}\\)\n\n\n\n\n\n\n\nExample\n\n\n\nnumber of boys out of 20 new borns\n\n\n\n\n\n5.3.2 Central limit theorem CLT\nCLT in simple words: the distribution of sample mean will be nearly normal regardless of what distribution the variable in the population is, as long as the sample size is large enough.\n\n\n\n\n\n\nExplain\n\n\n\nPoint out that the observed proportion of boys can be considered as a mean\nand the rule of thumb\n\n\n\\[Binom(n, p) \\rightarrow N(\\mu, \\sigma)\\quad \\text{for} \\quad n \\rightarrow \\infty\\]\nif \\(np \\geq 5\\) and \\(n(1-p) \\geq 5\\)"
+  },
+  {
+    "objectID": "section2_proportions.html#proportions",
+    "href": "section2_proportions.html#proportions",
+    "title": "7  Analysis of proportions",
+    "section": "7.1 Proportions",
+    "text": "7.1 Proportions\n\n7.1.1 Proportion and binomial distribution\nDeonte two possible outcomes of a binary variable by D (disease) and H (healthy). We want to study the probability, or risk \\(\\pi\\), that D occurs in the population.\nThe sample proportion \\(p\\) is defined as the proportion of individuals in the sample in category D,\n\\[p = \\frac{d}{n}\\] where \\(d\\) is the number of subjects in D, \\(n\\) is the total number in the sample.\nRecall that the sampling distribution of a proportion is the binomial distribution:\n\nindependent experiments\ntwo outcomes: success or not\nprobability of success is the same in all experiments\nprobability of success \\(+\\) probability of no success \\(=1\\)\n\nThe probability of getting exactly \\(d\\) events in a sample of \\(n\\) individuals is\n\\[P(d) = \\binom nd \\pi^{d}(1-\\pi)^{n-d}\\]\nGoal: estimate the true, unknown population risk (probability) \\(\\pi\\) using \\(p\\).\nAlso would like to know the uncertainty of \\(p\\): how far does it differ from \\(\\pi\\)?\n\n\n7.1.2 Uncertainty of a proportion\n\n\n\n\n\n\nexplain\n\n\n\ncheck the def of se, distinguish from sd;\nalso double check how to explain the estimation using sample proportion\nmake sure to explain when and where \\(\\pi, p\\) are appropriate\n\n\nThe standard error of the proportion of D in a sample of size \\(n\\) is\n\\[s.e. = \\sqrt{\\frac{\\pi (1-\\pi)}{n}}\\] The standard error is estimated by\n\\[\\hat{s.e.} = \\sqrt{\\frac{p (1-p)}{n}}\\] where \\(\\pi\\) is replaced by \\(p\\)\n\n\n\n\n\n\nexplain\n\n\n\nThe normal approximation, how is it applied in computation of CI\ncheck the histogram as n gets larger\n\n\nWhen the sample size \\(n\\) increases, the binomial distribution can be approximated by a normal distribution. This is useful for computing confidence intervals, and carrying out hypothesis tests.\nThe approximation is valid when \\(n\\pi\\) and \\(n(1-\\pi)\\) is greater or equal to 10.\nThe confidence interval for the population probability, \\(\\pi\\) is\n\\[\\text{CI} = (p - z \\times \\sqrt{\\frac{p(1-p)}{n}}, \\quad p + z \\times \\sqrt{\\frac{p(1-p)}{n}})\\] where \\(z\\) is the \\(1-\\frac{\\alpha}{2}\\) quantile of a standard normal distribution.\nFor 95% confidence interval, \\(\\alpha = 1-0.95 = 0.05\\), so \\(1-\\frac{\\alpha}{2} = 0.975\\) and \\(z = 1.96\\).\n\n\n\n\n\n\nExample\n\n\n\nSmoking habits example"
+  },
+  {
+    "objectID": "summary.html#equations",
+    "href": "summary.html#equations",
+    "title": "11  Summary",
+    "section": "11.1 equations",
+    "text": "11.1 equations\n\\[P(E) = \\beta\\]"
+  },
+  {
+    "objectID": "summary.html#tables",
+    "href": "summary.html#tables",
+    "title": "11  Summary",
+    "section": "11.2 tables",
+    "text": "11.2 tables\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG"
+  },
+  {
+    "objectID": "summary.html#colored-text",
+    "href": "summary.html#colored-text",
+    "title": "11  Summary",
+    "section": "11.3 colored text",
+    "text": "11.3 colored text\ntext\n\n\n\n\n\n\nexplain\n\n\n\nmore about"
+  },
+  {
+    "objectID": "section2_proportions.html#test-for-one-proportion",
+    "href": "section2_proportions.html#test-for-one-proportion",
+    "title": "7  Analysis of proportions",
+    "section": "7.2 Test for one proportion",
+    "text": "7.2 Test for one proportion\n\n\n\n\n\n\nExplain\n\n\n\nname of the test, interpretation of the test statistic and p-value\n\n\nPerform a z-test using the approximating normal distribution, to test the null hypothesis that the population proportion equals a pre-specified value, \\(\\pi_0\\):\n\\[H_0: \\pi = \\pi_0, \\quad H_a:\\pi \\neq\\pi_0\\]\nProviding that both \\(n\\pi_0\\) and \\(n(1-\\pi_0)\\) are greater than 10, the test statistic\n\\[z = \\frac{p-\\pi_0}{\\sqrt{\\pi_0(1-\\pi_0)/n}}\\] is standard normally distributed.\nFrom the test statistic we derive a P-value, which is the probability that \\(\\pi = \\pi_0\\), or more extreme !!!refine this !!!\n\n\n\n\n\n\nExample\n\n\n\nSmoking example"
+  },
+  {
+    "objectID": "section2_proportions.html#comparing-two-proportions",
+    "href": "section2_proportions.html#comparing-two-proportions",
+    "title": "7  Analysis of proportions",
+    "section": "7.3 Comparing two proportions",
+    "text": "7.3 Comparing two proportions\nWant to compare two groups with respect to the occurrence of a binary outcome, e.g. getting a certain disease, or whether a drug is effective:\n\nGroup 1: individuals exposed to a risk factor, or treatment\nGroup 0: individuals unexposed to a risk factor, or control/placebo\n\nThere are three common measures for comparing the outcomes between the two groups:\n\nRisk ratio, or relative risk\nOdds ratio\nRisk difference (not very used in practice)\n\nFor each measure we can compute a confidence interval, and carry out a hypothesis test.\n\n7.3.1 2 \\(\\times\\) 2 contingency table\nIndividuals are classified according to their exposure and outcome categories. Cross tabulation is used to display the data in a \\(2 \\times 2\\) contingency table.\n\n\n\n\n\n\nExplain\n\n\n\nshow table\n\n\n\n\n\n\n\n\nExample\n\n\n\nInfluenza vaccine example\n\n\n\n\n7.3.2 Risk difference\n\n\n\n\n\n\nExplain\n\n\n\nprobably wait until the end"
+  },
+  {
+    "objectID": "section2_proportions.html#relative-risk",
+    "href": "section2_proportions.html#relative-risk",
+    "title": "7  Analysis of proportions",
+    "section": "7.4 Relative risk",
+    "text": "7.4 Relative risk\nFor two population proportions \\(\\pi_1, \\pi_0\\), the relative risk, or risk ratio RR is the ratio of the two:\n\\[RR = \\pi_1/\\pi_0\\]\nIt is estimated by\n\\[\\hat{RR} = \\frac{p_1}{p_0} = \\frac{d_1/n_1}{d_0/n_0}\\] where \\(p_1, p_0\\) are the sample proportions in the exposed and unexposed groups.\nProperties of the relative risk\n\nRR = 1: the risks (of the outcome) are the same in the two groups\nRR > 1: the risk is higher among those exposed to the risk factor\nRR < 1: the risk is lower among those exposed to the risk factor\nThe further RR is from 1, the stronger the association between exposure and outcome\n\n\n7.4.1 Confidence interval for the relative risk\nThe 95% confidence interval for the relative risk is\n\\[CI = \\bigg(exp \\bigg\\{ log \\hat{RR} \\pm 1.96 \\times \\text{s.e.} (log \\hat{RR})\\bigg\\} \\bigg)\\]\nwhere the estimated standard error of the natural logarithm of the estimated RR is\n\\[\\hat{\\text{s.e.}} (log \\hat{RR}) = \\sqrt{\\frac{1}{d_1} - \\frac{1}{n_1}+ \\frac{1}{d_0} - \\frac{1}{n_0}}\\]\n\n\n\n\n\n\nExample\n\n\n\nAssociation between smoking and lung cancer"
+  },
+  {
+    "objectID": "section2_proportions.html#odds-and-odds-ratio",
+    "href": "section2_proportions.html#odds-and-odds-ratio",
+    "title": "7  Analysis of proportions",
+    "section": "7.5 Odds and odds ratio",
+    "text": "7.5 Odds and odds ratio\nThe odds of an outcome D (disease) is defined as\n\\[\\text{Odds} = \\frac{P(\\text{D happens})}{P(\\text{D does not happen})} = \\frac{P(D)}{1-P(D)}\\] The odds is estimated by\n\\[\\hat{\\text{Odds}} = \\frac{p}{1-p} = \\frac{d/n}{1-d/n} = \\frac{d/n}{h/n} = \\frac{d}{h}\\] which is the number of individuals who experience the outcome (e.g. disease) divided by the number of those who do not (healthy).\n\n7.5.1 Odds ratio\nThe odds ratio OR is the ratio between the odds in the exposed group, and the odds in the unexposed group. It is estimated by\n\\[\\hat{OR} = \\frac{d_1/h_1}{d_0/h_0} = \\frac{d_1 \\times h_0}{d_0 \\times h_1}\\] It is the cross-produce ratio of the \\(2 \\times 2\\) table.\nOR is one of the most common effect measures in medical statistics, even though it is less intuitive than RR. OR = 1 occurs when the odds (hence proportions) are the same in two groups.\nThe OR is always further away from 1 compared to RR. For rare outcomes, OR is approximately equal to the RR.\n\n\n\n\n\n\nExample\n\n\n\nNausea vs new drug, compute relative risk and odds ratio\n\n\n\n\n\n\n\n\nExplain\n\n\n\nWhen to choose what measure\nthe comparison\n\n\n\n\n7.5.2 Confidence interval for OR\nThe 95% confidence interval for the odds ratio OR is\n\\[CI = \\bigg(exp \\bigg\\{ log \\hat{OR} \\pm 1.96 \\times \\text{s.e.} (log \\hat{OR})\\bigg\\} \\bigg)\\]\nwhere the estimated standard error of the natural logarithm of the estimated odds ratio is\n\\[\\hat{\\text{s.e.}} (log \\hat{OR}) = \\sqrt{\\frac{1}{d_1} + \\frac{1}{h_1}+ \\frac{1}{d_0} + \\frac{1}{h_0}}\\] This is also known as Woolf’s formula\n\n\n\n\n\n\nExample\n\n\n\nAsthma among women and men"
+  },
+  {
+    "objectID": "section2_tables.html#chi-squared-test",
+    "href": "section2_tables.html#chi-squared-test",
+    "title": "8  Tables, chi-sq, exact tests",
+    "section": "8.1 Chi-squared test",
+    "text": "8.1 Chi-squared test\nThe test statistic for Chi-squared test for a \\(2 \\times 2\\) table is\n\\[\\chi^2 = \\sum_i \\frac{(O_i - E_i)^2}{E_i}, \\quad \\text{d.f.} = 1\\] where \\(O_i, E_i\\) is the observed and expected values in the \\(i_{th}\\) cell.\nFor a \\(2 \\times 2\\) table, the test statistic is chi-squared distributed with 1 degree of freedom under the null hypothesis, of no association between the two variables.\nThis is equivalent to the z-test for the difference between two proportions.\n\n\n\n\n\n\nExplain\n\n\n\nExplain the logic of the test, explain what is degree of freedom\nand the relevance with z-test for proportions\nand how it differs from RR, OR\n\n\n\n\n\n\n\n\nExample\n\n\n\nInfluenza trial example\n\n\nA second formulation:\n\\[\\chi^2 = \\frac{n \\times (d_1 h_0 - d_0 h_1)^2}{d\\times h \\times n_1 n_0}, \\quad \\text{d.f.} = 1\\]\n\n\n\n\n\n\nExample\n\n\n\nInfluenza trial example"
+  },
+  {
+    "objectID": "section2_tables.html#chi-squared-test-for-2-times-2-tables",
+    "href": "section2_tables.html#chi-squared-test-for-2-times-2-tables",
+    "title": "8  Analysis of contingency tables",
+    "section": "8.1 Chi-squared test for \\(2 \\times 2\\) tables",
+    "text": "8.1 Chi-squared test for \\(2 \\times 2\\) tables\nThe test statistic for Chi-squared test for a \\(2 \\times 2\\) table is\n\\[\\chi^2 = \\sum_i \\frac{(O_i - E_i)^2}{E_i}, \\quad \\text{d.f.} = 1\\] where \\(O_i, E_i\\) is the observed and expected values in the \\(i_{th}\\) cell.\nFor a \\(2 \\times 2\\) table, the test statistic is chi-squared distributed with 1 degree of freedom under the null hypothesis, of no association between the two variables.\nThis is equivalent to the z-test for the difference between two proportions.\n\n\n\n\n\n\nExplain\n\n\n\nExplain the logic of the test, explain what is degree of freedom\nand the relevance with z-test for proportions\nand how it differs from RR, OR\n\n\n\n\n\n\n\n\nExample\n\n\n\nInfluenza trial example\n\n\nA second formulation:\n\\[\\chi^2 = \\frac{n \\times (d_1 h_0 - d_0 h_1)^2}{d\\times h \\times n_1 n_0}, \\quad \\text{d.f.} = 1\\]\n\n\n\n\n\n\nExample\n\n\n\nInfluenza trial example"
+  },
+  {
+    "objectID": "section2_tables.html#fishers-exact-test",
+    "href": "section2_tables.html#fishers-exact-test",
+    "title": "8  Analysis of contingency tables",
+    "section": "8.2 Fisher’s Exact Test",
+    "text": "8.2 Fisher’s Exact Test\nWhen the numbers in the \\(2 \\times 2\\) table are very small, we need an exact test to compare the proportions.\nThis is based on calculating the exact probabilities of the observed table, and of more extreme tables with the same row and column totals, using the following formula\n\\[\\text{Exact probability} = \\frac{d! \\times h! \\times n_1 ! \\times n_0!}{n!\\times d_1! \\times d_0! \\times h_1! \\times h_0!}\\]\nwith the standard notation for \\(2 \\times 2\\) table.\n\n\n\n\n\n\nExplain\n\n\n\nLogic of the test\n\n\n\n8.2.1 P-value for the exact test\nApproach I:\nP-val = probability of obbserved table + probability of less probable tabless\nApproach II:\nP-val = \\(2 \\times(\\) probability of observed table + probability of more extreme tables in the same direction\\()\\)\n\n\n\n\n\n\nExample\n\n\n\nBleeding example"
+  },
+  {
+    "objectID": "section2_tables.html#chi-squared-test-for-larger-tables",
+    "href": "section2_tables.html#chi-squared-test-for-larger-tables",
+    "title": "8  Analysis of contingency tables",
+    "section": "8.3 Chi-squared test for larger tables",
+    "text": "8.3 Chi-squared test for larger tables\nChi-squared test can also be applied to larger tables, which can be denoted as \\(r \\times c\\) tables. \\(r\\) and \\(c\\) are the number of rows and columns in the table.\nTest statistic:\n\\[\\chi^2 = \\sum_i \\frac{(O_i - E_i)^2}{E_i}, \\quad \\text{d.f.} = (r-1)\\times (c-1)\\] which is chi-squared distributed with \\((r-1)\\times (c-1)\\) degrees of freedom. For \\(2 \\times 2\\) tables, this reduces to 1 df.\nTo compute the expected number,\n\\[E = \\frac{\\text{column total} \\times \\text{row total}}{\\text{overall total}}\\]\nThe approximation of chi-squared test is valid when\n\nless than 20% of the expected numbers are under 5, and\nnone of the expected numbers is less than 1.\n\nSometimes the restrictions can be overcome by combining rows (or columns) with low expected numbers, providing that these combinations make biological sense."
+  },
+  {
+    "objectID": "section2_tables.html#which-test-to-choose",
+    "href": "section2_tables.html#which-test-to-choose",
+    "title": "8  Analysis of contingency tables",
+    "section": "8.4 Which test to choose",
+    "text": "8.4 Which test to choose\nThe two tests have different assumptions.\nChi-squared test is valid when\n\nthe overall total is more than 40, regardless of the expected values; or,\nthe overall total is between 20 and 40, provided all the expected values are at least 5\n\nExact test is recommended when\n\nthe overall total is less than 20; or,\nthe overall total is betweenn 20 and 40, and the smallest of the four expected numbers is less than 5\n\nThe exact test can be very conservative - giving high p-values, and low power (i.e. fail to detect true effect)\n\n\n\n\n\n\nExplain\n\n\n\nRead about the choice of test: Lydersen, Fagerland, Laake, Recommended tests for association in 2x2 tables, Statistics in Medicine, 2009: Fisher’s exact should never be used without the mid-P correction"
   }
 ]

@@ -6,6 +6,10 @@ How to write stuff
 ## equations
 $$P(E) = \beta$$
 
+
+
+$$CI = \bigg\{exp   \bigg\}$$
+
 ## tables
 
 | Col1 | Col2 | Col3 |

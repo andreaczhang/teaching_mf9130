@@ -1,3 +1,144 @@
-# Tables, chi-sq, exact tests
+# Analysis of contingency tables
 
-In summary, this book has no content whatsoever.
+Topics:
+
+- Chi-squared test for $2 \times 2$ tables
+- Exact tests $2 \times 2$ tables
+- Chi-squared test for larger tables
+- Which test to choose
+
+
+Books and resources: 
+
+- Aalen 6.5
+- Kirkwood and Sterne 17
+
+
+## Chi-squared test for $2 \times 2$ tables
+
+The test statistic for **Chi-squared test** for a $2 \times 2$ table is
+
+$$\chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i}, \quad \text{d.f.} = 1$$
+where $O_i, E_i$ is the **observed** and **expected values** in the $i_{th}$ cell.
+
+For a $2 \times 2$ table, the test statistic is chi-squared distributed with 1 degree of freedom **under the null hypothesis**, of no association between the two variables.
+
+This is equivalent to the z-test for the difference between two proportions.
+
+
+::: {.callout-important}
+#### Explain
+
+Explain the logic of the test, explain what is degree of freedom
+
+and the relevance with z-test for proportions
+
+and how it differs from RR, OR
+:::
+
+
+::: {.callout-note}
+#### Example
+
+Influenza trial example
+:::
+
+A second formulation: 
+
+$$\chi^2 = \frac{n \times (d_1 h_0 - d_0 h_1)^2}{d\times h \times n_1 n_0}, \quad \text{d.f.} = 1$$
+
+::: {.callout-note}
+#### Example
+
+Influenza trial example
+:::
+
+
+## Fisher's Exact Test
+
+When the numbers in the $2 \times 2$ table are very small, we need an exact test to compare the proportions. 
+
+This is based on calculating the exact probabilities of the observed table, and of more extreme tables with the same row and column totals, using the following formula
+
+$$\text{Exact probability} = \frac{d! \times h! \times n_1 ! \times n_0!}{n!\times d_1! \times d_0! \times h_1! \times h_0!}$$
+
+with the standard notation for $2 \times 2$ table.
+
+::: {.callout-important}
+#### Explain
+
+Logic of the test
+:::
+
+
+
+
+
+### P-value for the exact test
+
+Approach I: 
+
+P-val = probability of obbserved table + probability of less probable tabless
+
+Approach II: 
+
+P-val = $2 \times($ probability of observed table + probability of more extreme tables in the same direction$)$
+
+
+::: {.callout-note}
+#### Example
+
+Bleeding example
+:::
+
+
+
+## Chi-squared test for larger tables
+
+Chi-squared test can also be applied to larger tables, which can be denoted as $r \times c$ tables. $r$ and $c$ are the number of rows and columns in the table. 
+
+Test statistic: 
+
+$$\chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i}, \quad \text{d.f.} = (r-1)\times (c-1)$$
+which is chi-squared distributed with $(r-1)\times (c-1)$ degrees of freedom. For $2 \times 2$ tables, this reduces to 1 df. 
+
+To compute the **expected** number, 
+
+$$E = \frac{\text{column total} \times \text{row total}}{\text{overall total}}$$
+
+The approximation of chi-squared test is valid when 
+
+- less than 20% of the expected numbers are under 5, and 
+- none of the expected numbers is less than 1.
+
+Sometimes the restrictions can be overcome by combining rows (or columns) with low expected numbers, providing that these combinations make biological sense.
+
+
+
+## Which test to choose
+
+The two tests have different assumptions. 
+
+**Chi-squared test** is valid when 
+
+- the overall total is more than 40, regardless of the expected values; or, 
+- the overall total is between 20 and 40, provided all the expected values are at least 5
+
+**Exact test** is recommended when 
+
+- the overall total is less than 20; or, 
+- the overall total is betweenn 20 and 40, and the smallest of the four expected numbers is less than 5
+
+The exact test can be very conservative - giving high p-values, and low power (i.e. fail to detect true effect)
+
+::: {.callout-important}
+#### Explain
+
+Read about the **choice of test**: Lydersen, Fagerland, Laake, Recommended tests for association in 2x2 tables, Statistics in Medicine, 2009: Fisher’s exact should never be used without the mid-P correction
+:::
+
+
+
+
+
+ 

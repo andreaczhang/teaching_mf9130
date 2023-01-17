@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Notes for MF9130/9130E - 8&nbsp; Tables, chi-sq, exact tests</title>
+<title>Lecture Notes for MF9130/9130E - 8&nbsp; Analysis of contingency tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -71,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -139,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./section2.html" class="sidebar-item-text sidebar-link">Summary</a>
+            <a href="./section2.html" class="sidebar-item-text sidebar-link">Section 2</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -152,12 +153,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proportions</span></a>
+  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></a>
+  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -190,14 +191,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#chi-squared-test-for-2-times-2-tables" id="toc-chi-squared-test-for-2-times-2-tables" class="nav-link active" data-scroll-target="#chi-squared-test-for-2-times-2-tables"><span class="toc-section-number">8.1</span>  Chi-squared test for <span class="math inline">\(2 \times 2\)</span> tables</a></li>
+  <li><a href="#fishers-exact-test" id="toc-fishers-exact-test" class="nav-link" data-scroll-target="#fishers-exact-test"><span class="toc-section-number">8.2</span>  Fisher’s Exact Test</a>
+  <ul class="collapse">
+  <li><a href="#p-value-for-the-exact-test" id="toc-p-value-for-the-exact-test" class="nav-link" data-scroll-target="#p-value-for-the-exact-test"><span class="toc-section-number">8.2.1</span>  P-value for the exact test</a></li>
+  </ul></li>
+  <li><a href="#chi-squared-test-for-larger-tables" id="toc-chi-squared-test-for-larger-tables" class="nav-link" data-scroll-target="#chi-squared-test-for-larger-tables"><span class="toc-section-number">8.3</span>  Chi-squared test for larger tables</a></li>
+  <li><a href="#which-test-to-choose" id="toc-which-test-to-choose" class="nav-link" data-scroll-target="#which-test-to-choose"><span class="toc-section-number">8.4</span>  Which test to choose</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></h1>
 </div>
 
 
@@ -212,9 +225,152 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In summary, this book has no content whatsoever.</p>
+<p>Topics:</p>
+<ul>
+<li>Chi-squared test for <span class="math inline">\(2 \times 2\)</span> tables</li>
+<li>Exact tests <span class="math inline">\(2 \times 2\)</span> tables</li>
+<li>Chi-squared test for larger tables</li>
+<li>Which test to choose</li>
+</ul>
+<p>Books and resources:</p>
+<ul>
+<li>Aalen 6.5</li>
+<li>Kirkwood and Sterne 17</li>
+</ul>
+<section id="chi-squared-test-for-2-times-2-tables" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="chi-squared-test-for-2-times-2-tables"><span class="header-section-number">8.1</span> Chi-squared test for <span class="math inline">\(2 \times 2\)</span> tables</h2>
+<p>The test statistic for <strong>Chi-squared test</strong> for a <span class="math inline">\(2 \times 2\)</span> table is</p>
+<p><span class="math display">\[\chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i}, \quad \text{d.f.} = 1\]</span> where <span class="math inline">\(O_i, E_i\)</span> is the <strong>observed</strong> and <strong>expected values</strong> in the <span class="math inline">\(i_{th}\)</span> cell.</p>
+<p>For a <span class="math inline">\(2 \times 2\)</span> table, the test statistic is chi-squared distributed with 1 degree of freedom <strong>under the null hypothesis</strong>, of no association between the two variables.</p>
+<p>This is equivalent to the z-test for the difference between two proportions.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Explain the logic of the test, explain what is degree of freedom</p>
+<p>and the relevance with z-test for proportions</p>
+<p>and how it differs from RR, OR</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Influenza trial example</p>
+</div>
+</div>
+<p>A second formulation:</p>
+<p><span class="math display">\[\chi^2 = \frac{n \times (d_1 h_0 - d_0 h_1)^2}{d\times h \times n_1 n_0}, \quad \text{d.f.} = 1\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Influenza trial example</p>
+</div>
+</div>
+</section>
+<section id="fishers-exact-test" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="fishers-exact-test"><span class="header-section-number">8.2</span> Fisher’s Exact Test</h2>
+<p>When the numbers in the <span class="math inline">\(2 \times 2\)</span> table are very small, we need an exact test to compare the proportions.</p>
+<p>This is based on calculating the exact probabilities of the observed table, and of more extreme tables with the same row and column totals, using the following formula</p>
+<p><span class="math display">\[\text{Exact probability} = \frac{d! \times h! \times n_1 ! \times n_0!}{n!\times d_1! \times d_0! \times h_1! \times h_0!}\]</span></p>
+<p>with the standard notation for <span class="math inline">\(2 \times 2\)</span> table.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Logic of the test</p>
+</div>
+</div>
+<section id="p-value-for-the-exact-test" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="p-value-for-the-exact-test"><span class="header-section-number">8.2.1</span> P-value for the exact test</h3>
+<p>Approach I:</p>
+<p>P-val = probability of obbserved table + probability of less probable tabless</p>
+<p>Approach II:</p>
+<p>P-val = <span class="math inline">\(2 \times(\)</span> probability of observed table + probability of more extreme tables in the same direction<span class="math inline">\()\)</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bleeding example</p>
+</div>
+</div>
+</section>
+</section>
+<section id="chi-squared-test-for-larger-tables" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="chi-squared-test-for-larger-tables"><span class="header-section-number">8.3</span> Chi-squared test for larger tables</h2>
+<p>Chi-squared test can also be applied to larger tables, which can be denoted as <span class="math inline">\(r \times c\)</span> tables. <span class="math inline">\(r\)</span> and <span class="math inline">\(c\)</span> are the number of rows and columns in the table.</p>
+<p>Test statistic:</p>
+<p><span class="math display">\[\chi^2 = \sum_i \frac{(O_i - E_i)^2}{E_i}, \quad \text{d.f.} = (r-1)\times (c-1)\]</span> which is chi-squared distributed with <span class="math inline">\((r-1)\times (c-1)\)</span> degrees of freedom. For <span class="math inline">\(2 \times 2\)</span> tables, this reduces to 1 df.</p>
+<p>To compute the <strong>expected</strong> number,</p>
+<p><span class="math display">\[E = \frac{\text{column total} \times \text{row total}}{\text{overall total}}\]</span></p>
+<p>The approximation of chi-squared test is valid when</p>
+<ul>
+<li>less than 20% of the expected numbers are under 5, and</li>
+<li>none of the expected numbers is less than 1.</li>
+</ul>
+<p>Sometimes the restrictions can be overcome by combining rows (or columns) with low expected numbers, providing that these combinations make biological sense.</p>
+</section>
+<section id="which-test-to-choose" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="which-test-to-choose"><span class="header-section-number">8.4</span> Which test to choose</h2>
+<p>The two tests have different assumptions.</p>
+<p><strong>Chi-squared test</strong> is valid when</p>
+<ul>
+<li>the overall total is more than 40, regardless of the expected values; or,</li>
+<li>the overall total is between 20 and 40, provided all the expected values are at least 5</li>
+</ul>
+<p><strong>Exact test</strong> is recommended when</p>
+<ul>
+<li>the overall total is less than 20; or,</li>
+<li>the overall total is betweenn 20 and 40, and the smallest of the four expected numbers is less than 5</li>
+</ul>
+<p>The exact test can be very conservative - giving high p-values, and low power (i.e.&nbsp;fail to detect true effect)</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read about the <strong>choice of test</strong>: Lydersen, Fagerland, Laake, Recommended tests for association in 2x2 tables, Statistics in Medicine, 2009: Fisher’s exact should never be used without the mid-P correction</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -353,7 +509,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./section2_proportions.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proportions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of Proportions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

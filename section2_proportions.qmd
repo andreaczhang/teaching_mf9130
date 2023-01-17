@@ -1,9 +1,263 @@
-# Proportions
+# Analysis of proportions
 
 Topics:
 
 - Proportions
-- Tests 
-- Comparingg two proportions
-- Odds ratio
-- Relative risk 
+- Test one proportion 
+- Comparing two proportions
+- Relative risk, odds ratio
+ 
+
+
+Books and resources: 
+
+- Aalen 6.1-6.4
+- Kirkwood and Sterne 14-16
+
+
+## Proportions
+
+
+### Proportion and binomial distribution
+
+Deonte two possible outcomes of a binary variable by **D (disease)** and **H (healthy)**. We want to study the probability, or **risk** $\pi$, that D occurs in the **population**.
+
+
+The **sample proportion** $p$ is defined as the proportion of individuals in the sample in category D, 
+
+$$p = \frac{d}{n}$$
+where $d$ is the number of subjects in D, $n$ is the total number in the sample.
+
+
+Recall that the sampling distribution of a proportion is the **binomial distribution**: 
+
+- independent experiments
+- two outcomes: success or not 
+- probability of success is the same in all experiments
+- probability of success $+$ probability of no success $=1$
+
+The probability of getting exactly $d$ events in a sample of $n$ individuals is 
+
+$$P(d) = \binom nd \pi^{d}(1-\pi)^{n-d}$$
+
+Goal: estimate the <u>true, unknown</u> population risk (probability) $\pi$ using $p$.
+
+Also would like to know the uncertainty of $p$: how far does it differ from $\pi$? 
+
+
+### Uncertainty of a proportion
+::: {.callout-important}
+#### explain
+
+check the def of se, distinguish from sd; 
+
+also double check how to explain the estimation using sample proportion
+
+make sure to explain when and where $\pi, p$ are appropriate
+:::
+
+The **standard error** of the proportion of D in a sample of size $n$ is 
+
+$$s.e. = \sqrt{\frac{\pi (1-\pi)}{n}}$$
+The standard error is **estimated by** 
+
+$$\hat{s.e.} = \sqrt{\frac{p (1-p)}{n}}$$
+where $\pi$ is replaced by $p$
+
+
+::: {.callout-important}
+#### explain
+
+The normal approximation, how is it applied in computation of CI
+
+check the histogram as n gets larger
+:::
+
+
+When the sample size $n$ increases, the binomial distribution can be approximated by a normal distribution. This is useful for computing **confidence intervals**, and carrying out **hypothesis tests**. 
+
+The approximation is valid when $n\pi$ and $n(1-\pi)$ is greater or equal to 10. 
+
+The **confidence interval for the population probability**, $\pi$ is
+
+$$\text{CI} = (p - z \times \sqrt{\frac{p(1-p)}{n}}, \quad p + z \times \sqrt{\frac{p(1-p)}{n}})$$
+where $z$ is the $1-\frac{\alpha}{2}$ quantile of a standard normal distribution. 
+
+For 95% confidence interval, $\alpha = 1-0.95 = 0.05$, so $1-\frac{\alpha}{2} = 0.975$ and $z = 1.96$.
+
+
+
+::: {.callout-note}
+#### Example
+
+Smoking habits example
+:::
+
+
+
+## Test for one proportion
+
+::: {.callout-important}
+#### Explain
+
+name of the test, interpretation of the test statistic and p-value
+:::
+
+
+Perform a z-test using the approximating normal distribution, to test the **null hypothesis** that **the population proportion equals a pre-specified value**, $\pi_0$: 
+
+$$H_0: \pi = \pi_0, \quad H_a:\pi \neq\pi_0$$
+
+Providing that both $n\pi_0$ and $n(1-\pi_0)$ are greater than 10, the **test statistic** 
+
+$$z = \frac{p-\pi_0}{\sqrt{\pi_0(1-\pi_0)/n}}$$
+is standard normally distributed. 
+
+From the test statistic we derive a **P-value**, which is the probability that $\pi = \pi_0$, or more extreme !!!refine this !!!
+
+
+::: {.callout-note}
+#### Example
+
+Smoking example
+:::
+
+
+## Comparing two proportions
+
+Want to compare **two groups** with respect to the occurrence of a binary outcome, e.g. getting a certain disease, or whether a drug is effective: 
+
+- Group 1: individuals **exposed** to a risk factor, or **treatment** 
+- Group 0: individuals **unexposed** to a risk factor, or **control/placebo**
+
+
+There are three common measures for comparing the outcomes between the two groups: 
+
+- Risk ratio, or **relative risk**
+- **Odds ratio**
+- Risk difference (not very used in practice)
+
+For each measure we can compute a confidence interval, and carry out a hypothesis test.
+
+
+### 2 $\times$ 2 contingency table
+
+Individuals are classified according to their exposure and outcome categories. Cross tabulation is used to display the data in a $2 \times 2$ contingency table. 
+
+::: {.callout-important}
+#### Explain
+
+show table
+:::
+
+
+::: {.callout-note}
+#### Example
+
+Influenza vaccine example 
+:::
+
+### Risk difference 
+
+::: {.callout-important}
+#### Explain
+
+probably wait until the end
+:::
+
+
+
+## Relative risk
+
+For two population proportions $\pi_1, \pi_0$, the **relative risk**, or **risk ratio** RR is the ratio of the two: 
+
+$$RR = \pi_1/\pi_0$$
+
+It is estimated by 
+
+$$\hat{RR} = \frac{p_1}{p_0} = \frac{d_1/n_1}{d_0/n_0}$$
+where $p_1, p_0$ are the sample proportions in the exposed and unexposed groups. 
+
+Properties of the relative risk
+
+- RR = 1: the risks (of the outcome) are the same in the two groups
+- RR > 1: the risk is higher among those exposed to the risk factor
+- RR < 1: the risk is lower among those exposed to the risk factor
+- The further RR is from 1, the **stronger the association** between exposure and outcome
+
+
+### Confidence interval for the relative risk
+
+The 95% confidence interval for the relative risk is 
+
+$$CI = \bigg(exp \bigg\{ log \hat{RR} \pm 1.96 \times \text{s.e.} (log \hat{RR})\bigg\} \bigg)$$
+
+where the estimated standard error of the natural logarithm of the estimated RR is 
+
+$$\hat{\text{s.e.}} (log \hat{RR}) = \sqrt{\frac{1}{d_1} - \frac{1}{n_1}+ \frac{1}{d_0} - \frac{1}{n_0}}$$
+
+::: {.callout-note}
+#### Example
+
+Association between smoking and lung cancer 
+:::
+
+
+
+## Odds and odds ratio
+
+The **odds** of an outcome D (disease) is defined as 
+
+$$\text{Odds} = \frac{P(\text{D happens})}{P(\text{D does not happen})} = \frac{P(D)}{1-P(D)}$$
+The odds is estimated by 
+
+$$\hat{\text{Odds}} = \frac{p}{1-p} = \frac{d/n}{1-d/n} = \frac{d/n}{h/n} = \frac{d}{h}$$
+which is the number of individuals who experience the outcome (e.g. disease) divided by the number of those who do not (healthy). 
+
+
+### Odds ratio 
+
+The **odds ratio** OR is the ratio between the odds in the exposed group, and the odds in the unexposed group. It is estimated by 
+
+$$\hat{OR} = \frac{d_1/h_1}{d_0/h_0} = \frac{d_1 \times h_0}{d_0 \times h_1}$$
+It is the cross-produce ratio of the $2 \times 2$ table.
+
+
+OR is one of the most common effect measures in medical statistics, even though it is less intuitive than RR. OR = 1 occurs when the odds (hence proportions) are the same in two groups. 
+
+The OR is always further away from 1 compared to RR. For rare outcomes, OR is approximately equal to the RR.
+
+
+
+::: {.callout-note}
+#### Example
+
+Nausea vs new drug, compute relative risk and odds ratio
+:::
+
+::: {.callout-important}
+#### Explain
+
+When to choose what measure
+
+the comparison 
+:::
+
+
+### Confidence interval for OR
+
+The 95% confidence interval for the odds ratio OR is 
+
+$$CI = \bigg(exp \bigg\{ log \hat{OR} \pm 1.96 \times \text{s.e.} (log \hat{OR})\bigg\} \bigg)$$
+
+where the estimated standard error of the natural logarithm of the estimated odds ratio is
+
+$$\hat{\text{s.e.}} (log \hat{OR}) = \sqrt{\frac{1}{d_1} + \frac{1}{h_1}+ \frac{1}{d_0} + \frac{1}{h_0}}$$
+This is also known as **Woolf's formula**
+
+::: {.callout-note}
+#### Example
+
+Asthma among women and men
+:::
+
