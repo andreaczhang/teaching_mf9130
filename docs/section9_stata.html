@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Notes for MF9130/9130E - 12&nbsp; Summary</title>
+<title>Lecture Notes for MF9130/9130E - 11&nbsp; Introduction to STATA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./section9_stata.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./section3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +61,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -178,12 +177,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section9_stata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></a>
+  <a href="./section9_stata.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -200,9 +199,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#equations" id="toc-equations" class="nav-link active" data-scroll-target="#equations"><span class="toc-section-number">12.1</span>  equations</a></li>
-  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="toc-section-number">12.2</span>  tables</a></li>
-  <li><a href="#colored-text" id="toc-colored-text" class="nav-link" data-scroll-target="#colored-text"><span class="toc-section-number">12.3</span>  colored text</a></li>
+  <li><a href="#get-started" id="toc-get-started" class="nav-link active" data-scroll-target="#get-started"><span class="toc-section-number">11.1</span>  Get started</a>
+  <ul class="collapse">
+  <li><a href="#file-system-where-things-are" id="toc-file-system-where-things-are" class="nav-link" data-scroll-target="#file-system-where-things-are"><span class="toc-section-number">11.1.1</span>  File system: where things are</a></li>
+  <li><a href="#get-help" id="toc-get-help" class="nav-link" data-scroll-target="#get-help"><span class="toc-section-number">11.1.2</span>  Get help</a></li>
+  </ul></li>
+  <li><a href="#data-entry-import-and-manipulation" id="toc-data-entry-import-and-manipulation" class="nav-link" data-scroll-target="#data-entry-import-and-manipulation"><span class="toc-section-number">11.2</span>  Data entry, import and manipulation</a>
+  <ul class="collapse">
+  <li><a href="#enter-data-manually" id="toc-enter-data-manually" class="nav-link" data-scroll-target="#enter-data-manually"><span class="toc-section-number">11.2.1</span>  Enter data manually</a></li>
+  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data"><span class="toc-section-number">11.2.2</span>  Import data</a></li>
+  <li><a href="#basic-manipulation" id="toc-basic-manipulation" class="nav-link" data-scroll-target="#basic-manipulation"><span class="toc-section-number">11.2.3</span>  Basic manipulation</a></li>
+  </ul></li>
+  <li><a href="#use-do-files" id="toc-use-do-files" class="nav-link" data-scroll-target="#use-do-files"><span class="toc-section-number">11.3</span>  Use <code>do files</code></a></li>
   </ul>
 </nav>
     </div>
@@ -211,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></h1>
 </div>
 
 
@@ -226,57 +234,76 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>How to write stuff</p>
-<section id="equations" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="equations"><span class="header-section-number">12.1</span> equations</h2>
-<p><span class="math display">\[P(E) = \beta\]</span></p>
-<p><span class="math display">\[CI = \bigg\{exp   \bigg\}\]</span></p>
+<p>Useful resources:</p>
+<ul>
+<li><a href="https://www.lse.ac.uk/Methodology/Software-tutorials/Stata-tutorials">STATA tutorial</a> by LSE</li>
+</ul>
+<section id="get-started" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="get-started"><span class="header-section-number">11.1</span> Get started</h2>
+<p>Basic components of the user interface:</p>
+<ul>
+<li><strong>command window</strong>: type in command to tell stata what to do</li>
+<li><strong>do-file editor</strong>: write and execute <code>do-file</code> scripts</li>
+<li><strong>data editor</strong>: makes it easy to edit and inspect data</li>
+</ul>
+<p><img src="figures/stata_1_openpage.png" class="img-fluid"></p>
+<p>When you <strong>execute a command</strong>, write the command in the command window, then <strong>hit Enter</strong>.</p>
+<p>For example, you can execute the command <code>use</code> to load data, and use <code>browse</code> to open up the data editor.</p>
+<p><img src="figures/stata_2_loaddata.png" class="img-fluid"></p>
+<p>Data editor looks like this:</p>
+<p><img src="figures/stata_3_data_editor.png" class="img-fluid"></p>
+<section id="file-system-where-things-are" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="file-system-where-things-are"><span class="header-section-number">11.1.1</span> File system: where things are</h3>
+<p>It is recommended to have different folders to stay organized. For example, you can have</p>
+<ul>
+<li>one folder for your <strong>scripts</strong> (such as <code>do-file</code>),</li>
+<li>one folder for <strong>data</strong> (for examplem, <code>csv</code>, <code>dta</code>, <code>xlsx</code>),</li>
+<li>one folder for <strong>documentation</strong>.</li>
+</ul>
 </section>
-<section id="tables" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="tables"><span class="header-section-number">12.2</span> tables</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Col1</th>
-<th>Col2</th>
-<th>Col3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td>B</td>
-<td>C</td>
-</tr>
-<tr class="even">
-<td>E</td>
-<td>F</td>
-<td>G</td>
-</tr>
-<tr class="odd">
-<td>A</td>
-<td>G</td>
-<td>G</td>
-</tr>
-</tbody>
-</table>
+<section id="get-help" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="get-help"><span class="header-section-number">11.1.2</span> Get help</h3>
+<p>In the command, type <code>help *command_name*</code> to open up the documentation:</p>
+<p><img src="figures/stata_6_help.png" class="img-fluid"></p>
+<p>Alternatively, use Google.</p>
 </section>
-<section id="colored-text" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="colored-text"><span class="header-section-number">12.3</span> colored text</h2>
-<p><span style="color: red;">text</span></p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-explain
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>more about</p>
-</div>
-</div>
+</section>
+<section id="data-entry-import-and-manipulation" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="data-entry-import-and-manipulation"><span class="header-section-number">11.2</span> Data entry, import and manipulation</h2>
+<p>Data format: <code>data.dta</code></p>
+<section id="enter-data-manually" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="enter-data-manually"><span class="header-section-number">11.2.1</span> Enter data manually</h3>
+<p>Open the <strong>data editor</strong>, and type in data. This is equivalent to the commands in the command window, which you can see in the <em>Results</em> panel.</p>
+<p><img src="figures/stata_7_enter_data.png" class="img-fluid"></p>
+<p><strong>Save</strong> your data by clicking Save on the data editor. This is equivalent to the following command:</p>
+<pre><code>save "data/path/demo_data.dta"</code></pre>
+</section>
+<section id="import-data" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="import-data"><span class="header-section-number">11.2.2</span> Import data</h3>
+<p>Load (import) data by the command <code>use</code>, then specify the path of the data file.</p>
+<p>Write <code>browse</code> to view the data, or alternatively, click the data editor icon.</p>
+<pre><code>use "data/path/demo_data.dta"</code></pre>
+<p><img src="figures/stata_8_loaddata2.png" class="img-fluid"></p>
+</section>
+<section id="basic-manipulation" class="level3" data-number="11.2.3">
+<h3 data-number="11.2.3" class="anchored" data-anchor-id="basic-manipulation"><span class="header-section-number">11.2.3</span> Basic manipulation</h3>
+<p>Change variable names with <code>rename</code></p>
+<pre><code>rename var1 name
+rename var2 gender
+rename var3 age</code></pre>
+<p>Add labels to variables, or change their properties with <code>label</code> command.</p>
+<p>It is worth noting that stata recognize <strong>double quote</strong> <code>""</code>. Single quote will produce errors.</p>
+<p><img src="figures/stata_9_addlabel.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="use-do-files" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="use-do-files"><span class="header-section-number">11.3</span> Use <code>do files</code></h2>
+<p><code>do files</code> are useful to save and document your analysis for the future. An example looks like this:</p>
+<p><img src="figures/stata_10_dofile.png" class="img-fluid"></p>
+<p>To <strong>run (execute)</strong> a <code>do file</code>, write <code>do *filename.do*</code> in the command; alternatively, <strong>hit Do</strong> icon</p>
+<pre><code>do filename.do</code></pre>
+<p>You might need to use <code>clear</code> to remove data object before creating a new data.</p>
+<p><img src="figures/stata_11_dofile2.png" class="img-fluid"></p>
 
 
 </section>
@@ -417,13 +444,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./section9_stata.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></span>
+      <a href="./section3.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 3</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

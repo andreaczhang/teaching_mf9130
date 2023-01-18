@@ -26,6 +26,7 @@ book:
         - section2_samplesize.qmd
 
     - part: section3.qmd
+    - section9_stata.qmd
     - summary.qmd
     - references.qmd
 

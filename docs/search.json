@@ -247,23 +247,23 @@
   {
     "objectID": "summary.html#equations",
     "href": "summary.html#equations",
-    "title": "11  Summary",
-    "section": "11.1 equations",
-    "text": "11.1 equations\n\\[P(E) = \\beta\\]"
+    "title": "12  Summary",
+    "section": "12.1 equations",
+    "text": "12.1 equations\n\\[P(E) = \\beta\\]\n\\[CI = \\bigg\\{exp   \\bigg\\}\\]"
   },
   {
     "objectID": "summary.html#tables",
     "href": "summary.html#tables",
-    "title": "11  Summary",
-    "section": "11.2 tables",
-    "text": "11.2 tables\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG"
+    "title": "12  Summary",
+    "section": "12.2 tables",
+    "text": "12.2 tables\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG"
   },
   {
     "objectID": "summary.html#colored-text",
     "href": "summary.html#colored-text",
-    "title": "11  Summary",
-    "section": "11.3 colored text",
-    "text": "11.3 colored text\ntext\n\n\n\n\n\n\nexplain\n\n\n\nmore about"
+    "title": "12  Summary",
+    "section": "12.3 colored text",
+    "text": "12.3 colored text\ntext\n\n\n\n\n\n\nexplain\n\n\n\nmore about"
   },
   {
     "objectID": "section2_proportions.html#test-for-one-proportion",
@@ -327,5 +327,47 @@
     "title": "8  Analysis of contingency tables",
     "section": "8.4 Which test to choose",
     "text": "8.4 Which test to choose\nThe two tests have different assumptions.\nChi-squared test is valid when\n\nthe overall total is more than 40, regardless of the expected values; or,\nthe overall total is between 20 and 40, provided all the expected values are at least 5\n\nExact test is recommended when\n\nthe overall total is less than 20; or,\nthe overall total is betweenn 20 and 40, and the smallest of the four expected numbers is less than 5\n\nThe exact test can be very conservative - giving high p-values, and low power (i.e. fail to detect true effect)\n\n\n\n\n\n\nExplain\n\n\n\nRead about the choice of test: Lydersen, Fagerland, Laake, Recommended tests for association in 2x2 tables, Statistics in Medicine, 2009: Fisher’s exact should never be used without the mid-P correction"
+  },
+  {
+    "objectID": "section9_stata.html#get-started",
+    "href": "section9_stata.html#get-started",
+    "title": "11  Introduction to STATA",
+    "section": "11.1 Get started",
+    "text": "11.1 Get started\nBasic components of the user interface:\n\ncommand window: type in command to tell stata what to do\ndo-file editor: write and execute do-file scripts\ndata editor: makes it easy to edit and inspect data\n\n\nWhen you execute a command, write the command in the command window, then hit Enter.\nFor example, you can execute the command use to load data, and use browse to open up the data editor.\n\nData editor looks like this:\n\n\n11.1.1 File system: where things are\nIt is recommended to have different folders to stay organized. For example, you can have\n\none folder for your scripts (such as do-file),\none folder for data (for examplem, csv, dta, xlsx),\none folder for documentation.\n\n\n\n11.1.2 Get help\nIn the command, type help *command_name* to open up the documentation:\n\nAlternatively, use Google."
+  },
+  {
+    "objectID": "section9_stata.html#data-import",
+    "href": "section9_stata.html#data-import",
+    "title": "11  Introduction to STATA",
+    "section": "11.2 Data import",
+    "text": "11.2 Data import"
+  },
+  {
+    "objectID": "section9_stata.html#data-entry-and-import",
+    "href": "section9_stata.html#data-entry-and-import",
+    "title": "11  Introduction to STATA",
+    "section": "11.2 Data entry and import",
+    "text": "11.2 Data entry and import\nData format: data.dta\n\n11.2.1 Enter data manually\n\n\n11.2.2 Import data\nInspect the data: either browse, or click the icon\nInspect a few variables: browse age eth to select age and eth variables\ncodebook age to inspect age variable"
+  },
+  {
+    "objectID": "section9_stata.html#data-import-entry-and-manipulation",
+    "href": "section9_stata.html#data-import-entry-and-manipulation",
+    "title": "11  Introduction to STATA",
+    "section": "11.2 Data import, entry and manipulation",
+    "text": "11.2 Data import, entry and manipulation\nData format: data.dta\n\n11.2.1 Import data\nInspect the data: either browse, or click the icon\nInspect a few variables: browse age eth to select age and eth variables\ncodebook age to inspect age variable\nUse clear to remove data object\n\n\n11.2.2 Enter data manually\nUse data editor\n\n\n11.2.3 Basic manipulation\nrename var1 name"
+  },
+  {
+    "objectID": "section9_stata.html#data-entry-import-and-manipulation",
+    "href": "section9_stata.html#data-entry-import-and-manipulation",
+    "title": "11  Introduction to STATA",
+    "section": "11.2 Data entry, import and manipulation",
+    "text": "11.2 Data entry, import and manipulation\nData format: data.dta\n\n11.2.1 Enter data manually\nOpen the data editor, and type in data. This is equivalent to the commands in the command window, which you can see in the Results panel.\n\nSave your data by clicking Save on the data editor. This is equivalent to the following command:\nsave \"data/path/demo_data.dta\"\n\n\n11.2.2 Import data\nLoad (import) data by the command use, then specify the path of the data file.\nWrite browse to view the data, or alternatively, click the data editor icon.\nuse \"data/path/demo_data.dta\"\n\n\n\n11.2.3 Basic manipulation\nChange variable names with rename\nrename var1 name\nrename var2 gender\nrename var3 age\nAdd labels to variables, or change their properties with label command.\nIt is worth noting that stata recognize double quote \"\". Single quote will produce errors."
+  },
+  {
+    "objectID": "section9_stata.html#use-do-files",
+    "href": "section9_stata.html#use-do-files",
+    "title": "11  Introduction to STATA",
+    "section": "11.3 Use do files",
+    "text": "11.3 Use do files\ndo files are useful to save and document your analysis for the future. An example looks like this:\n\nTo run (execute) a do file, write do *filename.do* in the command; alternatively, hit Do icon\ndo filename.do\nYou might need to use clear to remove data object before creating a new data."
   }
 ]
