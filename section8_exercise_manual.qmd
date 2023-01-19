@@ -1,0 +1,79 @@
+# Exercises
+
+
+## Probability 
+
+### Conditional probability
+
+The frequency of joint events look like below:
+
+|                | Sunny forecast | Cloudy forecast | Rainy forecast |
+|----------------|----------------|-----------------|----------------|
+| Sunny day  | 0.3            | 0.05            | 0.05           |
+| Cloudy day | 0.04           | 0.2             | 0.02           |
+| Rainy day  | 0.1            | 0.04            | 0.2            |
+
+1. What is the probability of a sunny day?
+
+2. What is the probability that the forecast is wrong?
+
+3. What is the probability of rainy when the forecast is sunny?
+
+::: {.callout-tip collapse='true'}
+#### Solution
+<u>Solution Q1</u>
+
+
+Sunny day means $P(S) = P(S \cap \text{any forecast})$
+
+$$P(S) = P(S \cap S_{forecast}) + P(S \cap C_{forecast}) + P(S\cap R_{forecast}) \\= 0.3+0.05+0.05 = 0.4$$
+
+This is the first row summed up together.
+
+<u>Solution Q2</u>
+
+Wrong forecast means wrong forecast regardless of the actual weather. For sunny day, the wrong forecast would be either cloudy (0.05) or rainy (0.05). Summing the probabilities of wrong forecast for **sunny** day, **cloudy** day and **rainy** day together: 
+
+$$P(\text{wrong forecast}) = (0.05+0.05) + (0.04+0.02) + (0.1+0.04) = 0.3$$
+
+<u>Solution Q1</u>
+
+The **joint probability of rainy day and sunny forecast** is 0.1. 
+
+The probabilities of **sunny forecast** are given in the first column. Summing them up together gives the probability of sunny forecast regardless of true weather: $0.3+0.04+0.1 = 0.44$.
+
+The conditional probability of rainy day given sunny forecast can be computed with the given formula:
+
+$$P(R|S_{forecast}) = \frac{P(R \cap S_{forecast})}{P(S_{forecast})}$$
+which is $0.1/0.44 = 0.23$.
+:::
+
+
+### Stochastic independence
+
+(Side effect of medication). A treatment has a side effect which has a risk of 1/1000. What is the probability that the side effect *does not occur* among 1000 patients?
+
+::: {.callout-tip collapse='true'}
+#### Solution
+
+For each ONE patient, $P(\text{no side effect}) = 1-P(\text{side effect}) = 0.999$
+
+We can assume that the 1000 patients are independent, and therefore can apply the **multiplicative rule**,
+
+$$P(\text{no side effect in all 1000 patients}) = 0.999 ^{1000} = 0.37$$
+:::
+
+
+
+## Diagnostic tests
+
+
+## Binomial and normal distribution
+
+
+
+## Proportion analysis
+
+
+
+## Table analysis

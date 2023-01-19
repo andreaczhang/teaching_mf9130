@@ -14,6 +14,7 @@ book:
       chapters:
         - section1_descrpt_stat.qmd
         - section1_probability.qmd
+        - section1_diagtest.qmd
         - section1_binom_dist.qmd
         - section1_normal_dist.qmd
 
@@ -26,8 +27,10 @@ book:
         - section2_samplesize.qmd
 
     - part: section3.qmd
+    # this part is for regression
+    - section8_exercise_manual.qmd
+    - section8_exercise_lab.qmd
     - section9_stata.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

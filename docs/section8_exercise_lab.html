@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Notes for MF9130/9130E - 4&nbsp; Binomial distribution</title>
+<title>Lecture Notes for MF9130/9130E - 12&nbsp; Stata exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./section1_normal_dist.html" rel="next">
-<link href="./section1_probability.html" rel="prev">
+<link href="./section9_stata.html" rel="next">
+<link href="./section8_exercise_manual.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +61,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Stata exercises</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -128,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section1_binom_dist.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  <a href="./section1_binom_dist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -178,12 +177,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section9_stata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></a>
+  <a href="./section8_exercise_manual.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exercises</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./section8_exercise_lab.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Stata exercises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section9_stata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,31 +200,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#random-variable-and-distribution" id="toc-random-variable-and-distribution" class="nav-link active" data-scroll-target="#random-variable-and-distribution"><span class="toc-section-number">4.1</span>  Random variable and distribution</a></li>
-  <li><a href="#random-trials-and-counting" id="toc-random-trials-and-counting" class="nav-link" data-scroll-target="#random-trials-and-counting"><span class="toc-section-number">4.2</span>  Random trials and counting</a>
-  <ul class="collapse">
-  <li><a href="#bernoulli-trials" id="toc-bernoulli-trials" class="nav-link" data-scroll-target="#bernoulli-trials"><span class="toc-section-number">4.2.1</span>  Bernoulli trials</a></li>
-  <li><a href="#binomial-trials" id="toc-binomial-trials" class="nav-link" data-scroll-target="#binomial-trials"><span class="toc-section-number">4.2.2</span>  Binomial trials</a></li>
-  <li><a href="#binomial-coefficient" id="toc-binomial-coefficient" class="nav-link" data-scroll-target="#binomial-coefficient"><span class="toc-section-number">4.2.3</span>  Binomial coefficient</a></li>
-  </ul></li>
-  <li><a href="#binomial-distribution" id="toc-binomial-distribution" class="nav-link" data-scroll-target="#binomial-distribution"><span class="toc-section-number">4.3</span>  Binomial distribution</a>
-  <ul class="collapse">
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="toc-section-number">4.3.1</span>  Examples</a></li>
-  <li><a href="#visualize-binomial-distribution" id="toc-visualize-binomial-distribution" class="nav-link" data-scroll-target="#visualize-binomial-distribution"><span class="toc-section-number">4.3.2</span>  Visualize binomial distribution</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Stata exercises</span></h1>
 </div>
 
 
@@ -235,143 +222,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Topics:</p>
-<ul>
-<li>Discrete probability distribution</li>
-<li>Binomial trials and coefficients</li>
-<li>Binomial distribution</li>
-</ul>
-<p>Books and resources:</p>
-<ul>
-<li>Aalen 4</li>
-<li>Kirkwood and Sterne 15.1-15.2</li>
-</ul>
-<section id="random-variable-and-distribution" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="random-variable-and-distribution"><span class="header-section-number">4.1</span> Random variable and distribution</h2>
-<p>Random (stochastic) trial: we do not know the outcome, but we know the set of possible outcomes</p>
-<p>Random variable: number linked to the outcome</p>
-<p><strong>Probability distribution</strong>: set of probabilities for each of the possible outcomes</p>
-<p>Properties of probability distribution</p>
-<p>sum up to 1</p>
-<p>mean, variance, pmf/pdf</p>
-</section>
-<section id="random-trials-and-counting" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="random-trials-and-counting"><span class="header-section-number">4.2</span> Random trials and counting</h2>
-<section id="bernoulli-trials" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="bernoulli-trials"><span class="header-section-number">4.2.1</span> Bernoulli trials</h3>
-<p>Often a process has two outcomes.</p>
-<ul>
-<li>Coin tossing: outcomes are <strong>head or tail</strong></li>
-<li>HIV test looks for the <strong>presence or absence</strong> of antibodies in the blood</li>
-</ul>
-<p>Two outcomes of interest:</p>
-<ul>
-<li>throw a dice, you are only interested in whether you get a 6 or not</li>
-</ul>
-</section>
-<section id="binomial-trials" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="binomial-trials"><span class="header-section-number">4.2.2</span> Binomial trials</h3>
-<p><strong>A series of random trials</strong> that satisfy:</p>
-<ul>
-<li>in each trial, record whether event A occurs or not</li>
-<li>the probability of A, <span class="math inline">\(P(A)\)</span> is the same in each trial, it is denoted by <span class="math inline">\(p\)</span></li>
-<li>all trials are independent</li>
-</ul>
-<p>Suppose you carry out n trials, looking for an event A in each trial. The result of a sequence:</p>
-<p><span class="math display">\[A, \bar{A}, A, A, \bar{A}, ..., A\]</span> Say that <span class="math inline">\(A\)</span> takes place <span class="math inline">\(x\)</span> times. This means <span class="math inline">\(\bar{A}\)</span> takes place <span class="math inline">\(n-x\)</span> times.</p>
-<p>What is the probability for a certain sequence?</p>
-<p>Recall that probabilities for independent events can be multiplied.</p>
-<p><span class="math display">\[P(sequence) = p \times (1-p) \times p ...\]</span> For <span class="math inline">\(x\)</span> number of <span class="math inline">\(p\)</span> and <span class="math inline">\(n-x\)</span> number of <span class="math inline">\(1-p\)</span>,</p>
-<p><span class="math display">\[P(sequence) = p^{x} (1-p)^{n-x}\]</span> The order of the sequence does not matter. The number of occurence matters.</p>
-</section>
-<section id="binomial-coefficient" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="binomial-coefficient"><span class="header-section-number">4.2.3</span> Binomial coefficient</h3>
-<p>We want to find the number of ways that <span class="math inline">\(x\)</span> objects can be chosen from a total of <span class="math inline">\(n\)</span> objects, regardless of order</p>
-<p>Binomial coefficient: <span class="math inline">\(\binom nx\)</span></p>
-<p><span class="math display">\[\binom nx = \frac{n!}{x!(n-x)!}\]</span> “x factorial”: <span class="math inline">\(x! = x \times (x-1) \times ... 2 \times 1\)</span></p>
-<p>Example: <span class="math inline">\(\binom 4 3 = \frac{4\times 3 \times 2 \times 1}{3 \times 2 \times 1 \times 1} = 4\)</span></p>
-</section>
-</section>
-<section id="binomial-distribution" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="binomial-distribution"><span class="header-section-number">4.3</span> Binomial distribution</h2>
-<p>The probability that <span class="math inline">\(A\)</span> occurs exact <span class="math inline">\(x\)</span> times is given by</p>
-<p><span class="math display">\[P(X = x) = \binom n x p^{x}(1-p)^{n-x}\]</span></p>
-<p>i.e.&nbsp;the number of distributing <span class="math inline">\(x\)</span> events in a sequence of length <span class="math inline">\(n\)</span>, times the probability that one particular sequence with <span class="math inline">\(x\)</span> events occurs.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Explain
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Explain what it means to multiply these two components, and how it is related to frequency</p>
-</div>
-</div>
-<section id="examples" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="examples"><span class="header-section-number">4.3.1</span> Examples</h3>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example, derivation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Blood type example. Demonstrate counting, and how it leads to binomial distribution with 4 outcomes</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Family with 4 kids, 2 boys. Compare theoretical and real-life percentage</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Multiple choice exam</p>
-</div>
-</div>
-</section>
-<section id="visualize-binomial-distribution" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="visualize-binomial-distribution"><span class="header-section-number">4.3.2</span> Visualize binomial distribution</h3>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Explain (might put it in another section)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Revisit the definition of mean variance, and relation to descriptive summary statistics</p>
-<p>Demo computation on a few different parameters</p>
-</div>
-</div>
+<p>How to write stuff</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -509,13 +362,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./section1_probability.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Probability</span></span>
+      <a href="./section8_exercise_manual.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exercises</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./section1_normal_dist.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Normal distribution</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./section9_stata.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

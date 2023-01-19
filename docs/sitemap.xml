@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/index.html</loc>
-    <lastmod>2023-01-17T16:07:07.306Z</lastmod>
+    <lastmod>2023-01-19T17:23:19.142Z</lastmod>
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section1.html</loc>
@@ -18,15 +18,15 @@
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section1_probability.html</loc>
-    <lastmod>2023-01-17T11:22:50.577Z</lastmod>
+    <lastmod>2023-01-19T17:22:17.821Z</lastmod>
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section1_binom_dist.html</loc>
-    <lastmod>2023-01-17T11:22:41.518Z</lastmod>
+    <lastmod>2023-01-19T11:03:50.532Z</lastmod>
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section1_normal_dist.html</loc>
-    <lastmod>2023-01-17T16:07:32.764Z</lastmod>
+    <lastmod>2023-01-19T11:04:17.511Z</lastmod>
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section2.html</loc>
@@ -66,6 +66,18 @@
   </url>
   <url>
     <loc>https://andreaczhang.github.io/teaching_mf9130/section9_stata.html</loc>
-    <lastmod>2023-01-18T16:51:12.518Z</lastmod>
+    <lastmod>2023-01-19T11:28:40.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andreaczhang.github.io/teaching_mf9130/section8_exercise_manual.html</loc>
+    <lastmod>2023-01-19T17:22:42.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andreaczhang.github.io/teaching_mf9130/section8_exercise_lab.html</loc>
+    <lastmod>2023-01-19T11:35:27.275Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andreaczhang.github.io/teaching_mf9130/section1_diagtest.html</loc>
+    <lastmod>2023-01-19T17:21:51.931Z</lastmod>
   </url>
 </urlset>

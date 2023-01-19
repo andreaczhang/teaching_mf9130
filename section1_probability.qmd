@@ -6,7 +6,6 @@ Topics:
 - Probability calculation
 - Conditional and total probability
 - Bayes' theorem
-- Diagnostic testing, sensitivity, specificity, positive and negative predictive value
 
 Books and resources: 
 
@@ -66,10 +65,18 @@ How frequency is linked to LLN. 'True probability'
 Child birth example
 :::
 
-::: {.callout-note}
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+
+::: {.callout-note collapse='true'}
 #### Example
 
 Coin tossing
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+
+$$P(X = x) = \binom nx p^x (1-p)^{n-x}$$
+
 :::
 
 
@@ -186,12 +193,18 @@ A and B are independent if
 $$P(A|B) = P(A)$$
 Interpretation: probability of A is the same if we also know B occurs
 
-::: {.callout-note}
-#### Examples
+::: {.callout-note collapse='true'}
+#### Examples: independence
 
-Appendicitis 
+Consider the following: 
 
-Influenza
+- A: Probability of I having the condition
+- B: Probability of my partner having the same condition
+
+Condition 1: diabetes, $P(A|B) = P(A)$
+
+Condition 2: Covid19, $P(A|B) \neq P(A)$
+
 :::
 
 Calculations can be simplified if there is stochastic independence
@@ -207,13 +220,26 @@ Dice (revisited)
 
 
 
-## Total probability, Bayes' theorem
+## Total probability 
 
 ::: {.callout-important}
 #### Explain
 
-Motivation for this section
+Visual box
+
 :::
+
+
+
+## Bayes' theorem
+
+::: {.callout-important}
+#### Explain
+
+Motivation for this section, visual box
+:::
+
+
 
 
 ::: {.callout-note}
@@ -227,52 +253,11 @@ Gender of twins
 
 
 
-## Diagnostic testing
-
-### Concepts
-
-Sensitivity
-
-Specificity
-
-Positive predictive value
-
-Negative predictive value
-
-
-::: {.callout-note}
-#### Example
-
-Mammography
-:::
-
-
-::: {.callout-note}
-#### Example
-
-HIV testing
-:::
-
-
-::: {.callout-note}
-#### Example
-
-ELISA test
-:::
-
-
-### Computation of PPV, NPV and prevalence
-
-Application of Bayes' theorem
-
-::: {.callout-note}
-#### Example
-
-HIV testing (revisited)
-:::
-
-
 ## Bayesian statistics
+
+
+
+
 
 
 

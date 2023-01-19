@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./section1_binom_dist.html" rel="next">
+<link href="./section1_diagtest.html" rel="next">
 <link href="./section1_descrpt_stat.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -128,12 +128,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section1_binom_dist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  <a href="./section1_diagtest.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Evaluation of diagnostic tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section1_normal_dist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Normal distribution</span></a>
+  <a href="./section1_binom_dist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section1_normal_dist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Normal distribution</span></a>
   </div>
 </li>
       </ul>
@@ -148,27 +153,27 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_hypo_test.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hypothesis testing</span></a>
+  <a href="./section2_hypo_test.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hypothesis testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of Proportions</span></a>
+  <a href="./section2_proportions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Analysis of proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Tables, chi-sq, exact tests</span></a>
+  <a href="./section2_tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Analysis of contingency tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_nonpara.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Non-parametric methods</span></a>
+  <a href="./section2_nonpara.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Non-parametric methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section2_samplesize.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sample size and power</span></a>
+  <a href="./section2_samplesize.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Sample size and power</span></a>
   </div>
 </li>
       </ul>
@@ -178,7 +183,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./section8_exercise_manual.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exercises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section8_exercise_lab.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Stata exercises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./section9_stata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction to STATA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,12 +226,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#stochastic-independence" id="toc-stochastic-independence" class="nav-link" data-scroll-target="#stochastic-independence"><span class="toc-section-number">3.3.1</span>  Stochastic independence</a></li>
   </ul></li>
-  <li><a href="#total-probability-bayes-theorem" id="toc-total-probability-bayes-theorem" class="nav-link" data-scroll-target="#total-probability-bayes-theorem"><span class="toc-section-number">3.4</span>  Total probability, Bayes’ theorem</a></li>
-  <li><a href="#diagnostic-testing" id="toc-diagnostic-testing" class="nav-link" data-scroll-target="#diagnostic-testing"><span class="toc-section-number">3.5</span>  Diagnostic testing</a>
-  <ul class="collapse">
-  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts"><span class="toc-section-number">3.5.1</span>  Concepts</a></li>
-  <li><a href="#computation-of-ppv-npv-and-prevalence" id="toc-computation-of-ppv-npv-and-prevalence" class="nav-link" data-scroll-target="#computation-of-ppv-npv-and-prevalence"><span class="toc-section-number">3.5.2</span>  Computation of PPV, NPV and prevalence</a></li>
-  </ul></li>
+  <li><a href="#total-probability" id="toc-total-probability" class="nav-link" data-scroll-target="#total-probability"><span class="toc-section-number">3.4</span>  Total probability</a></li>
+  <li><a href="#bayes-theorem" id="toc-bayes-theorem" class="nav-link" data-scroll-target="#bayes-theorem"><span class="toc-section-number">3.5</span>  Bayes’ theorem</a></li>
   <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics"><span class="toc-section-number">3.6</span>  Bayesian statistics</a></li>
   </ul>
 </nav>
@@ -247,7 +258,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Probability calculation</li>
 <li>Conditional and total probability</li>
 <li>Bayes’ theorem</li>
-<li>Diagnostic testing, sensitivity, specificity, positive and negative predictive value</li>
 </ul>
 <p>Books and resources:</p>
 <ul>
@@ -313,17 +323,23 @@ Example
 <p>Child birth example</p>
 </div>
 </div>
+<p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
 Example
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Coin tossing</p>
+<p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
+<p><span class="math display">\[P(X = x) = \binom nx p^x (1-p)^{n-x}\]</span></p>
+</div>
 </div>
 </div>
 </section>
@@ -442,17 +458,25 @@ Exercise
 <p>A and B are independent if</p>
 <p><span class="math display">\[P(A|B) = P(A)\]</span> Interpretation: probability of A is the same if we also know B occurs</p>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Examples
+Examples: independence
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Appendicitis</p>
-<p>Influenza</p>
+<p>Consider the following:</p>
+<ul>
+<li>A: Probability of I having the condition</li>
+<li>B: Probability of my partner having the same condition</li>
+</ul>
+<p>Condition 1: diabetes, <span class="math inline">\(P(A|B) = P(A)\)</span></p>
+<p>Condition 2: Covid19, <span class="math inline">\(P(A|B) \neq P(A)\)</span></p>
+</div>
 </div>
 </div>
 <p>Calculations can be simplified if there is stochastic independence</p>
@@ -472,8 +496,8 @@ Examples
 </div>
 </section>
 </section>
-<section id="total-probability-bayes-theorem" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="total-probability-bayes-theorem"><span class="header-section-number">3.4</span> Total probability, Bayes’ theorem</h2>
+<section id="total-probability" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="total-probability"><span class="header-section-number">3.4</span> Total probability</h2>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -484,7 +508,23 @@ Explain
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Motivation for this section</p>
+<p>Visual box</p>
+</div>
+</div>
+</section>
+<section id="bayes-theorem" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="bayes-theorem"><span class="header-section-number">3.5</span> Bayes’ theorem</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Motivation for this section, visual box</p>
 </div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -500,72 +540,6 @@ Example
 <p>Gender of twins</p>
 </div>
 </div>
-</section>
-<section id="diagnostic-testing" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="diagnostic-testing"><span class="header-section-number">3.5</span> Diagnostic testing</h2>
-<section id="concepts" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="concepts"><span class="header-section-number">3.5.1</span> Concepts</h3>
-<p>Sensitivity</p>
-<p>Specificity</p>
-<p>Positive predictive value</p>
-<p>Negative predictive value</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Mammography</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>HIV testing</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ELISA test</p>
-</div>
-</div>
-</section>
-<section id="computation-of-ppv-npv-and-prevalence" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="computation-of-ppv-npv-and-prevalence"><span class="header-section-number">3.5.2</span> Computation of PPV, NPV and prevalence</h3>
-<p>Application of Bayes’ theorem</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>HIV testing (revisited)</p>
-</div>
-</div>
-</section>
 </section>
 <section id="bayesian-statistics" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="bayesian-statistics"><span class="header-section-number">3.6</span> Bayesian statistics</h2>
@@ -714,8 +688,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./section1_binom_dist.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./section1_diagtest.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Evaluation of diagnostic tests</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

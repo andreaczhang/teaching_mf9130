@@ -1,0 +1,76 @@
+# Evaluation of diagnostic tests
+
+Topics: 
+
+- Evaluation of diagnostic test 
+- sensitivity and specificity 
+- positive and negative predictive value
+
+Book and resources:
+
+- Kirkwood and Sterne 36.2
+
+
+
+## Diagnostic tests
+
+A test screens people for a disease, such as the PCR or antigen tests for Covid-19. 
+
+- Each person taking the test either have, or not have the disease; 
+- the test result can be **positive**: classifying the person as having the disease
+- or **negative**: classifying the person as not having the disease.
+
+The **test result** may, or may not match the person's **actual status**.
+
+### Confusion matrix 
+
+
+
+Sensitivity
+
+Specificity
+
+Positive predictive value
+
+Negative predictive value
+
+::: {.callout-important}
+#### Explain
+
+use visual aid
+:::
+
+
+
+::: {.callout-note}
+#### Example
+
+Mammography
+:::
+
+
+::: {.callout-note}
+#### Example
+
+HIV testing
+:::
+
+
+::: {.callout-note}
+#### Example
+
+ELISA test
+:::
+
+
+## Computation of PPV, NPV and prevalence
+
+Application of Bayes' theorem
+
+::: {.callout-note}
+#### Example
+
+HIV testing (revisited)
+:::
+
+
