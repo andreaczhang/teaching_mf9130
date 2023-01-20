@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -213,7 +214,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#confusion-matrix" id="toc-confusion-matrix" class="nav-link" data-scroll-target="#confusion-matrix"><span class="toc-section-number">4.1.1</span>  Confusion matrix</a></li>
   </ul></li>
-  <li><a href="#computation-of-ppv-npv-and-prevalence" id="toc-computation-of-ppv-npv-and-prevalence" class="nav-link" data-scroll-target="#computation-of-ppv-npv-and-prevalence"><span class="toc-section-number">4.2</span>  Computation of PPV, NPV and prevalence</a></li>
+  <li><a href="#diagnostic-tests-and-prevalence" id="toc-diagnostic-tests-and-prevalence" class="nav-link" data-scroll-target="#diagnostic-tests-and-prevalence"><span class="toc-section-number">4.2</span>  Diagnostic tests and prevalence</a>
+  <ul class="collapse">
+  <li><a href="#example-hiv-testing" id="toc-example-hiv-testing" class="nav-link" data-scroll-target="#example-hiv-testing"><span class="toc-section-number">4.2.1</span>  Example: HIV testing</a></li>
+  <li><a href="#false-positive-ppv-and-revalence" id="toc-false-positive-ppv-and-revalence" class="nav-link" data-scroll-target="#false-positive-ppv-and-revalence"><span class="toc-section-number">4.2.2</span>  False positive, PPV and revalence</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -258,10 +263,47 @@ ul.task-list li input[type="checkbox"] {
 <p>The <strong>test result</strong> may, or may not match the person’s <strong>actual status</strong>.</p>
 <section id="confusion-matrix" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="confusion-matrix"><span class="header-section-number">4.1.1</span> Confusion matrix</h3>
-<p>Sensitivity</p>
-<p>Specificity</p>
-<p>Positive predictive value</p>
-<p>Negative predictive value</p>
+<p>Denote the subjects with positive condition as <span class="math inline">\(P\)</span>, and subjects with negative condition as <span class="math inline">\(N\)</span>.</p>
+<p>Total population: <span class="math inline">\(P+N\)</span></p>
+<p>Prevalence (of positive condition): <span class="math inline">\(\frac{P}{P+N}\)</span></p>
+<table class="table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Predicted Positive</th>
+<th>Predicted Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Positive condition</strong> <span class="math inline">\(P\)</span></td>
+<td>True Positive TP</td>
+<td>False Negative FN</td>
+</tr>
+<tr class="even">
+<td><strong>Negative condition</strong> <span class="math inline">\(N\)</span></td>
+<td>False Positive FP</td>
+<td>True Negative TN</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sensitivity</strong> is the probability of revealing that a person has the condition. It is also known as <strong>true positive rate</strong> (TPR), as it is the proportion of true positives.</p>
+<p><span class="math display">\[\text{Sensitivity}= \frac{TP}{P} = \frac{TP}{TP+FN}\]</span></p>
+<p>The complement of sensitivity (TPR) is the <strong>false negative rate</strong> (FNR),</p>
+<p><span class="math display">\[FNR = 1-\text{sensitivity} =\frac{FN}{P} = \frac{FN}{TP + FN}\]</span></p>
+<p><strong>Specificity</strong> is the probability of revealing that a person does not have the condition (i.e.&nbsp;healthy). It is also known as <strong>true negative rate</strong>.</p>
+<p><span class="math display">\[\text{Specificity} = \frac{TN}{N} = \frac{TN}{TN + FP}\]</span></p>
+<p>The complement of specificity is <strong>false positive rate</strong> (FPR),</p>
+<p><span class="math display">\[FPR = 1-\text{specificity} =\frac{FP}{N} = \frac{FP}{TN + FP}\]</span></p>
+<p><strong>Positive predictive value (PPV)</strong>: probability that the person with the condition was given a positive test result</p>
+<p><span class="math display">\[PPV = \frac{TP}{P_{predicted}} = \frac{TP}{TP + FP}\]</span></p>
+<p><strong>Negative predictive value (NPV)</strong>: probability that the person without the condition (i.e.&nbsp;healthy) was give a negative test result.</p>
+<p><span class="math display">\[NPV = \frac{TN}{N_{predicted}} = \frac{TN}{TN + FN}\]</span></p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -276,64 +318,159 @@ Explain
 </div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Example
+Example: Mammography
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Mammography</p>
+<p>(From the Norwegian Medical Journal, 1990) 372 women with a lump in the breast have been referred to a surgical clinic.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Mammography benign</th>
+<th>Mammography malign</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Final diagnosis benign</td>
+<td>331</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>Final diagnosis malign</td>
+<td>3</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p>Identify the positive test result (malign), and positive condition (diagnosis malign).</p>
+<p>Sensitivity: <span class="math inline">\(22/(22+3) = 0.88\)</span></p>
+<p>Specificity: <span class="math inline">\(331/(331+16) = 0.95\)</span></p>
+<p>Positive predictive value: <span class="math inline">\(22/(22+16) = 0.58\)</span></p>
+<p>Negative predictive value: <span class="math inline">\(331/(331+3) = 0.99\)</span></p>
 </div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>HIV testing</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ELISA test</p>
 </div>
 </div>
 </section>
 </section>
-<section id="computation-of-ppv-npv-and-prevalence" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="computation-of-ppv-npv-and-prevalence"><span class="header-section-number">4.2</span> Computation of PPV, NPV and prevalence</h2>
-<p>Application of Bayes’ theorem</p>
+<section id="diagnostic-tests-and-prevalence" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="diagnostic-tests-and-prevalence"><span class="header-section-number">4.2</span> Diagnostic tests and prevalence</h2>
+<p>The concepts in diagnostic testing can be formulated in the form of conditional probability,</p>
+<ul>
+<li>Sensitivity: <span class="math inline">\(P(\text{pred pos}|\text{disease})\)</span></li>
+<li>Specificity: <span class="math inline">\(P(\text{pred neg}|\text{healthy})\)</span></li>
+<li>Positive predictive value: <span class="math inline">\(P(\text{disease}|\text{pred pos})\)</span></li>
+<li>Negative predictive value: <span class="math inline">\(P(\text{healthy}|\text{pred neg})\)</span></li>
+</ul>
+<p>Bayes’ theorem can be applied to link <strong>sensitivity, specificity and prevalence</strong> to <strong>PPV and NPV</strong>.</p>
+<p>For positive predictive value,</p>
+<p><span class="math display">\[PPV = \frac{\text{sens} \cdot \text{prev}}{\text{sens} \cdot \text{prev} + (1-\text{spes}) \cdot (1-\text{prev})}\]</span></p>
+<p>Similarly, for negative predictive value,</p>
+<p><span class="math display">\[NPV = \frac{\text{spes} \cdot (1-\text{prev}) }{(1-\text{sens}) \cdot \text{prev} + \text{spes} \cdot (1-\text{prev})}\]</span></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>derivation?</p>
+</div>
+</div>
+<section id="example-hiv-testing" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="example-hiv-testing"><span class="header-section-number">4.2.1</span> Example: HIV testing</h3>
+<p>We want to test for antibodies of the HIV virus.</p>
+<ul>
+<li>Positive result: test shows antibodies</li>
+<li>Negative result: test does not show antibodies</li>
+</ul>
+<p>The test result may be wrong.</p>
+<p>A <strong>false positive</strong> might come from antibodies from related virus, but not HIV. The probability of error is 0.2%.</p>
+<p>A <strong>false negative</strong> might be that antibodies are not yet produced in sufficient quantity, hence are not detected by the test. The probability of error is 2%.</p>
+<p>Assume that prevalence of HIV is 0.1%.</p>
+<p>What is the probability of a person <strong>having HIV, if he got a positive test result</strong>?</p>
+<p>What is the probability of a person <strong>not having HIV, if he got a negative test result</strong>?</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Example
+Example: HIV testing I
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>HIV testing (revisited)</p>
+<p>Recall the relation between sensitivity and false negative, and between specificity with false positive.</p>
+<p>We know the following information about the test:</p>
+<ul>
+<li>false negative rate <span class="math inline">\(FNR = 2\%\)</span>: sensitivity <span class="math inline">\(\text{sens} = 1-2\% = 98\%\)</span></li>
+<li>false positive rate <span class="math inline">\(FPR = 0.2\%\)</span>: specificity <span class="math inline">\(\text{spec} = 1-0.2\% = 99.8\%\)</span></li>
+</ul>
+<p>For 100 000 persons,</p>
+<ul>
+<li>Number of HIV infected (positive condition): <span class="math inline">\(100000 \times 0.001 = 100\)</span></li>
+<li>True positives: <span class="math inline">\(100 \times 0.98 = 98\)</span></li>
+<li>False negatives: 2</li>
+<li>Number of not HIV infected (negative condition): <span class="math inline">\(100000-100 = 99900\)</span></li>
+<li>False positives: <span class="math inline">\(99900 \times 0.002 = 199.8\)</span>, say <span class="math inline">\(200\)</span></li>
+<li>True negatives: <span class="math inline">\(99900 \times 0.998 = 99700\)</span></li>
+<li>Positive predictive value, <span class="math inline">\(PPV = TP/(TP+FP) = 98/(98+200)= 0.329\)</span></li>
+<li>Negative predictive value, <span class="math inline">\(NPV = TN/(TN+FN) = 99700/(99700+2) = 0.9999\)</span></li>
+</ul>
+</div>
+</div>
+<p>We can also use the formula.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example: HIV testing II
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(PPV = \frac{\text{sens} \cdot \text{prev}}{\text{sens} \cdot \text{prev} + (1-\text{spes}) \cdot (1-\text{prev})} = \frac{0.98 \times 0.001}{0.98 \times 0.001 + 0.002 \times 0.999} = 0.329\)</span></p>
+<p><span class="math inline">\(NPV = \frac{\text{spes} \cdot (1-\text{prev}) }{(1-\text{sens}) \cdot \text{prev} + \text{spes} \cdot (1-\text{prev})} = \frac{0.998 \times 0.999}{0.98 \times 0.001 + 0.998 \times 0.999} = 0.999\)</span></p>
+</div>
+</div>
+</section>
+<section id="false-positive-ppv-and-revalence" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="false-positive-ppv-and-revalence"><span class="header-section-number">4.2.2</span> False positive, PPV and revalence</h3>
+<p>As can be seen from the HIV example, PPV (i.e.&nbsp;the probability of detecting an actual condition, when the test is positive) depends on <strong>prevalence</strong>.</p>
+<ul>
+<li>When prevalence is 1/10000, 1/1000, 1/100, 1/10</li>
+<li>Corresponding PPV: 5%, 33%, 83%, 98%</li>
+</ul>
+<p>The risk of getting false positives is greater for <strong>rare</strong> diseases, and smaller for more common diseases.</p>
+<p>False positives are problematic in mass screening for disease. It is possible that the majority of the positives (test results) are false positives.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Explain
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>explain a bit better</p>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
